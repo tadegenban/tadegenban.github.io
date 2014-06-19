@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <title>My Site</title>
+        <style type="text/css">
+            article > hgroup > h1,
+            main > hgroup > h1
+            {
+                border-bottom: 4px solid #045578;
+            }
+            article > hgroup > h2,
+            main > hgroup > h2 
+            {
+                float: right;
+                clear: right;
+                margin-top: 0;
+                font-size: 12pt;
+            }
+            nav#tags h1 {
+                font-size: 14pt;
+            }
+            .crosspost {
+                margin: 0 2em;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">My Site</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="top-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/index.html">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="main container">
+            
+<div class="row">
+
+    <div class="col-md-9">
+        <main>
+            <article>
+                <hgroup>
+                    <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs 自动分割窗口</a></h1>
+                    <h2><time datetime="2014-06-19">
+                        2014-06-19
+                    </time></h2>
+                    <h2>tadegenban</h2>
+                </hgroup>
+                <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个
+每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp
+来每次启动的时候自动分割窗口，如下,
+    (add-hook 'window-setup-hook (lambda () (split-window-horizontally)
+                               (select-window-2)
+                               (split-window-vertically) )
+          )
+把这段代码放到.emacs文件里或者.emamcs.d里的配置文件就可以了</p>
+
+            </article>
+        </main>
+        <ul class="pager">
+            <li class="previous disabled">
+                <span>&larr; Older</span>
+            </li>
+            <li class="next disabled">
+                <span>Newer &rarr;</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-3">
+        <nav id="tags">
+            <h1>Tags</h1>
+            <ul class="list-inline">
+                <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+        </div>
+    </body>
+</html>
