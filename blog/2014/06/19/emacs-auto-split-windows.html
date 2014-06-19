@@ -63,14 +63,19 @@
                 </time></h2>
                 <h2>tadegenban</h2>
             </hgroup>
-            <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个
-每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp
-来每次启动的时候自动分割窗口，如下,
-    (add-hook 'window-setup-hook (lambda () (split-window-horizontally)
-                               (select-window-2)
-                               (split-window-vertically) )
-          )
-把这段代码放到.emacs文件里或者.emamcs.d里的配置文件就可以了</p>
+            <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
+
+<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
+
+<p>来每次启动的时候自动分割窗口，如下,</p>
+
+<pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
+                           (select-window-2)
+                           (split-window-vertically) )
+      )
+</code></pre>
+
+<p>把这段代码放到.emacs文件里或者.emamcs.d里的配置文件就可以了</p>
 
         </main>
     </div>
