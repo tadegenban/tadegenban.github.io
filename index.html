@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
         <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <title>他</title>
+        <title>sd</title>
         <style type="text/css">
             article > hgroup > h1,
             main > hgroup > h1
@@ -40,7 +40,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">他</a>
+                        <a class="navbar-brand" href="/">sd</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="top-navbar-collapse-1">
@@ -59,92 +59,92 @@
         <main>
             <article>
                 <hgroup>
-                    <h1><a href="/blog/2014/06/19/markdown-guide.html">Markdown è¯­æ³</a></h1>
+                    <h1><a href="/blog/2014/06/19/markdown-guide.html">Markdown 语法</a></h1>
                     <h2><time datetime="2014-06-19">
                         2014-06-19
                     </time></h2>
                     <h2>tadegenban</h2>
                 </hgroup>
-                <h2>ä»ä¹æ¯Markdown</h2>
+                <h2>什么是Markdown</h2>
 
-<p>Markdownæ¯ä¸ä¸ªå°ææ¬è½¬åä¸ºHTMLçå·¥å·ãç®åæ¥è¯´ï¼Markdownæ¯ä¸ä¸ªå¼é¡¾å¯è¯»æ§ä¸æç¨æ§çè½»éçº§æ è®°ä½ç³»ãMarkdownå¹¶ä¸è¿½æ±å¤§èå¨ï¼å®åªå³å¿HTMLéæå¸¸ç¨çå ä¸ªæ è®°ï¼å¯¹äºä¸äºä¸å¸¸ç¨çæ è®°å®åè®¸ç´æ¥å°HTMLæ è®°æå¥ææ¬ã</p>
+<p>Markdown是一个将文本转化为HTML的工具。简单来说，Markdown是一个兼顾可读性与易用性的轻量级标记体系。Markdown并不追求大而全，它只关心HTML里最常用的几个标记，对于一些不常用的标记它允许直接将HTML标记插入文本。</p>
 
 <hr />
 
-<h2>æ é¢</h2>
+<h2>标题</h2>
 
-<p>Markdownæä¾äºä¸¤ç§æ¹å¼ï¼SetextåAtxï¼æ¥æ¾ç¤ºæ é¢ã</p>
+<p>Markdown提供了两种方式（Setext和Atx）来显示标题。</p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
-<pre><code>    Setextæ¹å¼
-    æ é¢1
+<pre><code>    Setext方式
+    标题1
     =================
 
-    æ é¢2
+    标题2
     -----------------
 
-    Atxæ¹å¼
-    # æ é¢1
-    ## æ é¢2
-    ###### æ é¢6
+    Atx方式
+    # 标题1
+    ## 标题2
+    ###### 标题6
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
-<p>Setextæ¹å¼</p>
+<p>Setext方式</p>
 
-<h1>æ é¢1</h1>
+<h1>标题1</h1>
 
-<h2>æ é¢2</h2>
+<h2>标题2</h2>
 
-<p>Atxæ¹å¼</p>
+<p>Atx方式</p>
 
-<h1>æ é¢1</h1>
+<h1>标题1</h1>
 
-<h2>æ é¢2</h2>
+<h2>标题2</h2>
 
-<h6>æ é¢6</h6>
+<h6>标题6</h6>
 
 <hr />
 
-<h2>æ¢è¡</h2>
+<h2>换行</h2>
 
-<p>å¨æå­çæ«å°¾ä½¿ç¨ä¸¤ä¸ªæä¸¤ä¸ªä»¥ä¸çç©ºæ ¼æ¥è¡¨ç¤ºæ¢è¡ã</p>
+<p>在文字的末尾使用两个或两个以上的空格来表示换行。</p>
 
 <hr />
 
-<h2>å¼ç¨</h2>
+<h2>引用</h2>
 
-<p>è¡é¦ä½¿ç¨<code>&gt;</code>å ä¸ä¸ä¸ªç©ºæ ¼è¡¨ç¤ºå¼ç¨æ®µè½ï¼åé¨å¯ä»¥åµå¥å¤ä¸ªå¼ç¨ã</p>
+<p>行首使用<code>&gt;</code>加上一个空格表示引用段落，内部可以嵌套多个引用。</p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
-<pre><code>    &gt; è¿æ¯ä¸ä¸ªå¼ç¨ï¼
-    &gt; è¿éæ¨ææ¢è¡ï¼
-    &gt; å¨è¿éæ¢è¡äºã
-    &gt; &gt; åé¨åµå¥
+<pre><code>    &gt; 这是一个引用，
+    &gt; 这里木有换行，
+    &gt; 在这里换行了。
+    &gt; &gt; 内部嵌套
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
 <blockquote>
-  <p>è¿æ¯ä¸ä¸ªå¼ç¨ï¼
-  è¿éæ¨ææ¢è¡ï¼
-  å¨è¿éæ¢è¡äºã</p>
+  <p>这是一个引用，
+  这里木有换行，
+  在这里换行了。</p>
   
   <blockquote>
-    <p>åé¨åµå¥</p>
+    <p>内部嵌套</p>
   </blockquote>
 </blockquote>
 
 <hr />
 
-<h2>åè¡¨</h2>
+<h2>列表</h2>
 
-<p><strong>æ åºåè¡¨</strong>ä½¿ç¨<code>*</code>ã<code>+</code>æ<code>-</code>åé¢å ä¸ç©ºæ ¼æ¥è¡¨ç¤ºã</p>
+<p><strong>无序列表</strong>使用<code>*</code>、<code>+</code>或<code>-</code>后面加上空格来表示。</p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
 <pre><code>    * Item 1
     * Item 2
@@ -159,7 +159,7 @@
     - Item 3
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
 <ul>
 <li>Item 1</li>
@@ -173,16 +173,16 @@
 <li>Item 3</li>
 </ul>
 
-<p><strong>æåºåè¡¨</strong>ä½¿ç¨æ°å­å è±æå¥å·å ç©ºæ ¼è¡¨ç¤ºã</p>
+<p><strong>有序列表</strong>使用数字加英文句号加空格表示。</p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
 <pre><code>    1. Item 1
     2. Item 2
     3. Item 3
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
 <ol>
 <li>Item 1</li>
@@ -192,21 +192,21 @@
 
 <hr />
 
-<h2>ä»£ç åºå</h2>
+<h2>代码区域</h2>
 
-<p><strong>è¡åä»£ç </strong>ä½¿ç¨<strong>åææ </strong><code>`</code>è¡¨ç¤ºã
-<strong>ä»£ç æ®µè½</strong>åæ¯å¨æ¯è¡æå­åå 4ä¸ªç©ºæ ¼æè1ä¸ªç¼©è¿ç¬¦è¡¨ç¤ºã</p>
+<p><strong>行内代码</strong>使用<strong>反斜杠</strong><code>`</code>表示。
+<strong>代码段落</strong>则是在每行文字前加4个空格或者1个缩进符表示。</p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
-<pre><code>    Bashä¸­å¯ä»¥ä½¿ç¨echoæ¥è¿è¡è¾åºã
+<pre><code>    Bash中可以使用echo来进行输出。
             $ echo 'Something'
             $ echo -e '\tSomething\n'
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
-<p>Bashä¸­å¯ä»¥ä½¿ç¨echoæ¥è¿è¡è¾åºã</p>
+<p>Bash中可以使用echo来进行输出。</p>
 
 <pre><code>    $ echo 'Something'
     $ echo -e '\tSomething\n'
@@ -214,117 +214,117 @@
 
 <hr />
 
-<h2>å¼ºè°</h2>
+<h2>强调</h2>
 
-<p>Markdownä½¿ç¨<code>\*</code>æ<code>\_</code>è¡¨ç¤ºå¼ºè°ã</p>
+<p>Markdown使用<code>\*</code>或<code>\_</code>表示强调。</p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
-<pre><code>    åæå· = *æä½*
-    åä¸åçº¿ = _æä½_
-    åæå· = **å ç²**
-    åä¸åçº¿ = __å ç²__
+<pre><code>    单星号 = *斜体*
+    单下划线 = _斜体_
+    双星号 = **加粗**
+    双下划线 = __加粗__
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
-<p>åæå· = <em>æä½</em>
-åä¸åçº¿ = <em>æä½</em>
-åæå· = <strong>å ç²</strong>
-åä¸åçº¿ = <strong>å ç²</strong></p>
+<p>单星号 = <em>斜体</em>
+单下划线 = <em>斜体</em>
+双星号 = <strong>加粗</strong>
+双下划线 = <strong>加粗</strong></p>
 
 <hr />
 
-<h2>é¾æ¥</h2>
+<h2>链接</h2>
 
-<p>Markdownæ¯æä¸¤ç§é£æ ¼çé¾æ¥ï¼<em>Inline</em>å<em>Reference</em>ã</p>
+<p>Markdown支持两种风格的链接：<em>Inline</em>和<em>Reference</em>。</p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
-<p><em>Inline</em>ï¼ä»¥ä¸­æ¬å·æ è®°æ¾ç¤ºçé¾æ¥ææ¬ï¼åé¢ç´§è·ç¨å°æ¬å·åå´çé¾æ¥ãå¦æé¾æ¥ætitleå±æ§ï¼åå¨é¾æ¥ä¸­ä½¿ç¨<strong>ç©ºæ ¼</strong>å <strong>"titleå±æ§"</strong>ã
-<em>Reference</em>ï¼ä¸è¬åºç¨äºå¤ä¸ªä¸åä½ç½®ä½¿ç¨ç¸åé¾æ¥ãéå¸¸åä¸ºä¸¤ä¸ªé¨åï¼è°ç¨é¨åä¸º<code>[é¾æ¥ææ¬][ref]</code>ï¼å®ä¹é¨åå¯ä»¥åºç°å¨ææ¬ä¸­çå¶ä»ä½ç½®ï¼æ ¼å¼ä¸º<code>[ref]: http://some/link/address (å¯éçæ é¢)</code>ã
-<em>æ³¨ï¼refä¸­ä¸åºåå¤§å°åã</em></p>
+<p><em>Inline</em>：以中括号标记显示的链接文本，后面紧跟用小括号包围的链接。如果链接有title属性，则在链接中使用<strong>空格</strong>加<strong>"title属性"</strong>。
+<em>Reference</em>：一般应用于多个不同位置使用相同链接。通常分为两个部分，调用部分为<code>[链接文本][ref]</code>；定义部分可以出现在文本中的其他位置，格式为<code>[ref]: http://some/link/address (可选的标题)</code>。
+<em>注：ref中不区分大小写。</em></p>
 
-<pre><code>    è¿æ¯ä¸ä¸ªInline[ç¤ºä¾](http://metacpan.org "å¯éçtitle")ã
-    è¿æ¯ä¸ä¸ªReference[ç¤ºä¾][ref]ã
+<pre><code>    这是一个Inline[示例](http://metacpan.org "可选的title")。
+    这是一个Reference[示例][ref]。
     [ref]: http://metacpan.org
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
-<p>è¿æ¯ä¸ä¸ª<em>Inline</em><a href="http://metacpan.org" title="å¯éçtitle">ç¤ºä¾</a>ã
-è¿æ¯ä¸ä¸ª<em>Reference</em><a href="http://metacpan.org">ç¤ºä¾</a>ã</p>
+<p>这是一个<em>Inline</em><a href="http://metacpan.org" title="可选的title">示例</a>。
+这是一个<em>Reference</em><a href="http://metacpan.org">示例</a>。</p>
 
 <hr />
 
-<h2>å¾ç</h2>
+<h2>图片</h2>
 
-<p>å¾ççä½¿ç¨æ¹æ³åºæ¬ä¸åé¾æ¥ç±»ä¼¼ï¼åªæ¯å¨ä¸­æ¬å·åå <strong>å¹å·</strong>ã
-<em>æ³¨ï¼Markdownä¸è½è®¾ç½®å¾çå¤§å°ï¼å¦æå¿é¡»è®¾ç½®ååºä½¿ç¨HTMLæ è®°&lt;img&gt;ã</em></p>
+<p>图片的使用方法基本上和链接类似，只是在中括号前加<strong>叹号</strong>。
+<em>注：Markdown不能设置图片大小，如果必须设置则应使用HTML标记&lt;img&gt;。</em></p>
 
-<h4>è¯­æ³ï¼</h4>
+<h4>语法：</h4>
 
-<pre><code>    Inlineç¤ºä¾ï¼![æ¿ä»£ææ¬](/assets/images/jian.jpg "å¯éçtitle")
-    Referenceç¤ºä¾ï¼![æ¿ä»£ææ¬][pic]
-    [pic]: /assets/images/ship.jpg "å¯éçtitle"
-    HTMLç¤ºä¾ï¼&lt;img src="/assets/images/jian.jpg" alt="æ¿ä»£ææ¬" title="æ é¢ææ¬" width="200" /&gt;
+<pre><code>    Inline示例：![替代文本](/assets/images/jian.jpg "可选的title")
+    Reference示例：![替代文本][pic]
+    [pic]: /assets/images/ship.jpg "可选的title"
+    HTML示例：&lt;img src="/assets/images/jian.jpg" alt="替代文本" title="标题文本" width="200" /&gt;
 </code></pre>
 
-<h4>ææï¼</h4>
+<h4>效果：</h4>
 
-<p><img src="/assets/images/jian.jpg" alt="æ¿ä»£ææ¬" title="æ é¢ææ¬" width="200" /></p>
+<p><img src="/assets/images/jian.jpg" alt="替代文本" title="标题文本" width="200" /></p>
 
 <hr />
 
-<h2>å¶ä»</h2>
+<h2>其他</h2>
 
-<h4>èªå¨é¾æ¥</h4>
+<h4>自动链接</h4>
 
-<p>ä½¿ç¨<strong>å°æ¬å·</strong>ï¼å¯ä»¥ä¸ºè¾å¥çURLæèé®ç®±èªå¨åå»ºé¾æ¥ãå¦<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;:&#x74;&#x65;&#x73;&#x74;&#64;&#100;&#111;&#109;&#97;i&#x6E;&#x2E;&#99;&#x6F;&#109;">&#x74;&#x65;&#x73;&#x74;&#64;&#100;&#111;&#109;&#97;i&#x6E;&#x2E;&#99;&#x6F;&#109;</a>ã</p>
+<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#x6D;&#97;&#x69;&#x6C;&#116;&#x6F;:&#116;&#x65;&#115;&#116;&#64;&#x64;&#x6F;&#x6D;&#97;&#105;&#110;&#46;c&#x6F;&#109;">&#116;&#x65;&#115;&#116;&#64;&#x64;&#x6F;&#x6D;&#97;&#105;&#110;&#46;c&#x6F;&#109;</a>。</p>
 
-<h4>åéçº¿</h4>
+<h4>分隔线</h4>
 
-<p>å¨ä¸è¡ä¸­ä½¿ç¨ä¸ä¸ªæä¸ä¸ªä»¥ä¸ç<code>*</code>ã<code>-</code>æ<code>_</code>å¯ä»¥æ·»å åéçº¿ï¼å¶ä¸­å¯ä»¥æç©ºç½ï¼ä½æ¯ä¸è½æå¶ä»å­ç¬¦ã</p>
+<p>在一行中使用三个或三个以上的<code>*</code>、<code>-</code>或<code>_</code>可以添加分隔线，其中可以有空白，但是不能有其他字符。</p>
 
-<h4>è½¬ä¹å­ç¬¦</h4>
+<h4>转义字符</h4>
 
-<p>Markdownä¸­çè½¬ä¹å­ç¬¦ä¸º<code>\</code>ï¼å¯ä»¥è½¬ä¹çæï¼</p>
+<p>Markdown中的转义字符为<code>\</code>，可以转义的有：</p>
 
 <ul>
-<li>\\ åææ </li>
-<li>\` åå¼å·</li>
-<li>\* æå·</li>
-<li>\_ ä¸åçº¿</li>
-<li>\{\} å¤§æ¬å·</li>
-<li>\[\] ä¸­æ¬å·</li>
-<li>\(\) å°æ¬å·</li>
-<li>\# äºå·</li>
-<li>\+ å å·</li>
-<li>\- åå·</li>
-<li>\. è±æå¥å·</li>
-<li>\! æå¹å·</li>
+<li>\\ 反斜杠</li>
+<li>\` 反引号</li>
+<li>\* 星号</li>
+<li>\_ 下划线</li>
+<li>\{\} 大括号</li>
+<li>\[\] 中括号</li>
+<li>\(\) 小括号</li>
+<li>\# 井号</li>
+<li>\+ 加号</li>
+<li>\- 减号</li>
+<li>\. 英文句号</li>
+<li>\! 感叹号</li>
 </ul>
 
 <hr />
 
-<h2>ç»è¯­</h2>
+<h2>结语</h2>
 
-<p>Markdownè¯­æ³å¾å¤§ç¨åº¦ä¸åå°äºç¼è¾çææ¬ï¼ä½æ¯å¨åä½è¿ç¯æç« çæ¶åä¹åç°æäºæ è®°å¯¹ä¸­æçæ¯æä¼¼ä¹å¹¶ä¸å®ç¾ï¼è½ç¶è¿äºç¼ºé·å¯ä»¥éè¿ç´æ¥æå¥HTMLä»£ç è§£å³ï¼ä½è¿ä¹åä¸ç¹é½ä¸æ¼äº®ï¼ãæ»çæ¥è¯´ï¼è½å¤å¨ç¦»çº¿ç¶æä¸ä½¿ç¨å½ä»¤è¡æ¨¡å¼è¿è¡åä½è¿æ¯å¾ç½çï¼ç¸æ¯å¨çº¿åä½æ¨¡å¼ç²¾åå¯ä»¥æ´ä¸æ³¨ã</p>
+<p>Markdown语法很大程度上减少了编辑的成本，但是在写作这篇文章的时候也发现某些标记对中文的支持似乎并不完美，虽然这些缺陷可以通过直接插入HTML代码解决（但这么做一点都不漂亮）。总的来说，能够在离线状态下使用命令行模式进行写作还是很爽的，相比在线写作模式精力可以更专注。</p>
 
             </article>
             <article>
                 <hgroup>
-                    <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs èªå¨åå²çªå£</a></h1>
+                    <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs 自动分割窗口</a></h1>
                     <h2><time datetime="2014-06-19">
                         2014-06-19
                     </time></h2>
                     <h2>tadegenban</h2>
                 </hgroup>
-                <p>ä½¿ç¨Emacsçæ¶åææ»æ¯ä¹ æ¯åä¸ä¸ªçªå£ï¼Codeä¸ä¸ªï¼orgä¸ä¸ªï¼dirä¸ä¸ª</p>
+                <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
-<p>æ¯æ¬¡å¯å¨Emacsé½è¦C-x-3 C-x-2æ¥å»ºç«çªå£ï¼åé¢å°±èªå·±å°è¯åäºä¸ç¹Elisp</p>
+<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
 
-<p>æ¥æ¯æ¬¡å¯å¨çæ¶åèªå¨åå²çªå£ï¼å¦ä¸,</p>
+<p>来每次启动的时候自动分割窗口，如下,</p>
 
 <pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
                            (select-window-2)
@@ -332,7 +332,7 @@
       )
 </code></pre>
 
-<p>æè¿æ®µä»£ç æ¾å°.emacsæä»¶éæè.emacs.déçéç½®æä»¶å°±å¯ä»¥äº</p>
+<p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
 
             </article>
         </main>
