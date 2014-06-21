@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
         <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <title>他的跟班</title>
+        <title>tadegenban</title>
         <style type="text/css">
             article > hgroup > h1,
             main > hgroup > h1
@@ -40,7 +40,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">他的跟班</a>
+                        <a class="navbar-brand" href="/">tadegenban</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="top-navbar-collapse-1">
@@ -59,17 +59,17 @@
         <main>
             <article>
                 <hgroup>
-                    <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs èªå¨åå²çªå£</a></h1>
+                    <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs 自动分割窗口</a></h1>
                     <h2><time datetime="2014-06-19">
                         2014-06-19
                     </time></h2>
                     <h2>tadegenban</h2>
                 </hgroup>
-                <p>ä½¿ç¨Emacsçæ¶åææ»æ¯ä¹ æ¯åä¸ä¸ªçªå£ï¼Codeä¸ä¸ªï¼orgä¸ä¸ªï¼dirä¸ä¸ª</p>
+                <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
-<p>æ¯æ¬¡å¯å¨Emacsé½è¦C-x-3 C-x-2æ¥å»ºç«çªå£ï¼åé¢å°±èªå·±å°è¯åäºä¸ç¹Elisp</p>
+<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
 
-<p>æ¥æ¯æ¬¡å¯å¨çæ¶åèªå¨åå²çªå£ï¼å¦ä¸,</p>
+<p>来每次启动的时候自动分割窗口，如下,</p>
 
 <pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
                            (select-window-2)
@@ -77,7 +77,7 @@
       )
 </code></pre>
 
-<p>æè¿æ®µä»£ç æ¾å°.emacsæä»¶éæè.emacs.déçéç½®æä»¶å°±å¯ä»¥äº</p>
+<p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
 
             </article>
         </main>
