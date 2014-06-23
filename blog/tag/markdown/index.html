@@ -11,22 +11,16 @@
             {
                 border-bottom: 4px solid #045578;
             }
-            article > hgroup > h2,
-            main > hgroup > h2 
-            {
-                float: right;
-                clear: right;
+            header aside {
                 margin-top: 0;
                 font-size: 12pt;
             }
-            nav#tags h1 {
+            .sidebar h1 {
                 font-size: 14pt;
             }
-            .crosspost {
-                margin: 0 2em;
-                font-style: italic;
-            }
         </style>
+            <link rel="alternate" href="/blog/tag/markdown.atom" type="application/atom+xml" />
+            <link rel="alternate" href="/blog/tag/markdown.rss" type="application/rss+xml" />
     </head>
     <body>
         <header>
@@ -58,13 +52,15 @@
     <div class="col-md-9">
         <main>
             <article>
-                <hgroup>
+                <header>
                     <h1><a href="/blog/2014/06/19/markdown-guide.html">Markdown 语法</a></h1>
-                    <h2><time datetime="2014-06-19">
-                        2014-06-19
-                    </time></h2>
-                    <h2>tadegenban</h2>
-                </hgroup>
+                    <aside>
+                        <p><time datetime="2014-06-19">
+                            Posted on 2014-06-19
+                        </time>
+                        by tadegenban</p>
+                    </aside>
+                </header>
                 <h2>什么是Markdown</h2>
 
 <p>Markdown是一个将文本转化为HTML的工具。简单来说，Markdown是一个兼顾可读性与易用性的轻量级标记体系。Markdown并不追求大而全，它只关心HTML里最常用的几个标记，对于一些不常用的标记它允许直接将HTML标记插入文本。</p>
@@ -280,7 +276,7 @@
 
 <h4>自动链接</h4>
 
-<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#x6D;&#97;&#x69;&#108;&#x74;&#111;:&#116;e&#115;&#x74;&#64;d&#x6F;&#x6D;&#x61;&#105;&#110;&#x2E;&#99;&#111;&#x6D;">&#116;e&#115;&#x74;&#64;d&#x6F;&#x6D;&#x61;&#105;&#110;&#x2E;&#99;&#111;&#x6D;</a>。</p>
+<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="m&#x61;i&#x6C;&#116;&#x6F;:&#116;&#101;s&#x74;&#64;&#x64;&#111;&#109;&#x61;&#x69;&#x6E;&#46;&#99;&#111;&#109;">&#116;&#101;s&#x74;&#64;&#x64;&#111;&#109;&#x61;&#x69;&#x6E;&#46;&#99;&#111;&#109;</a>。</p>
 
 <h4>分隔线</h4>
 
@@ -323,14 +319,25 @@
         </ul>
     </div>
 
-    <div class="col-md-3">
-        <nav id="tags">
-            <h1>Tags</h1>
-            <ul class="list-inline">
-                <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
-                <li><a href="/blog/tag/markdown/index.html">markdown</a></li>
-            </ul>
-        </nav>
+    <div class="sidebar col-md-3">
+        <h1>Tags</h1>
+        <ul class="list-inline">
+            <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
+            <li><a href="/blog/tag/markdown/index.html">markdown</a></li>
+        </ul>
+        <h1>Feeds</h1>
+        <ul class="list-inline">
+            <li>
+                <a href="/blog/tag/markdown.atom" rel="alternate" type="application/atom+xml">
+                    Atom
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tag/markdown.rss" rel="alternate" type="application/rss+xml">
+                    RSS
+                </a>
+            </li>
+        </ul>
     </div>
 
 </div>

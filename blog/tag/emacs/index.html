@@ -11,22 +11,16 @@
             {
                 border-bottom: 4px solid #045578;
             }
-            article > hgroup > h2,
-            main > hgroup > h2 
-            {
-                float: right;
-                clear: right;
+            header aside {
                 margin-top: 0;
                 font-size: 12pt;
             }
-            nav#tags h1 {
+            .sidebar h1 {
                 font-size: 14pt;
             }
-            .crosspost {
-                margin: 0 2em;
-                font-style: italic;
-            }
         </style>
+            <link rel="alternate" href="/blog/tag/emacs.atom" type="application/atom+xml" />
+            <link rel="alternate" href="/blog/tag/emacs.rss" type="application/rss+xml" />
     </head>
     <body>
         <header>
@@ -58,13 +52,15 @@
     <div class="col-md-9">
         <main>
             <article>
-                <hgroup>
+                <header>
                     <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs 自动分割窗口</a></h1>
-                    <h2><time datetime="2014-06-19">
-                        2014-06-19
-                    </time></h2>
-                    <h2>tadegenban</h2>
-                </hgroup>
+                    <aside>
+                        <p><time datetime="2014-06-19">
+                            Posted on 2014-06-19
+                        </time>
+                        by tadegenban</p>
+                    </aside>
+                </header>
                 <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
 <p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
@@ -91,14 +87,25 @@
         </ul>
     </div>
 
-    <div class="col-md-3">
-        <nav id="tags">
-            <h1>Tags</h1>
-            <ul class="list-inline">
-                <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
-                <li><a href="/blog/tag/markdown/index.html">markdown</a></li>
-            </ul>
-        </nav>
+    <div class="sidebar col-md-3">
+        <h1>Tags</h1>
+        <ul class="list-inline">
+            <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
+            <li><a href="/blog/tag/markdown/index.html">markdown</a></li>
+        </ul>
+        <h1>Feeds</h1>
+        <ul class="list-inline">
+            <li>
+                <a href="/blog/tag/emacs.atom" rel="alternate" type="application/atom+xml">
+                    Atom
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tag/emacs.rss" rel="alternate" type="application/rss+xml">
+                    RSS
+                </a>
+            </li>
+        </ul>
     </div>
 
 </div>

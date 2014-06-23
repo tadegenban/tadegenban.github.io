@@ -11,20 +11,12 @@
             {
                 border-bottom: 4px solid #045578;
             }
-            article > hgroup > h2,
-            main > hgroup > h2 
-            {
-                float: right;
-                clear: right;
+            header aside {
                 margin-top: 0;
                 font-size: 12pt;
             }
-            nav#tags h1 {
+            .sidebar h1 {
                 font-size: 14pt;
-            }
-            .crosspost {
-                margin: 0 2em;
-                font-style: italic;
             }
         </style>
     </head>
@@ -56,13 +48,15 @@
 
     <div class="col-md-9">
         <main>
-            <hgroup>
+            <header>
                 <h1>Emacs 自动分割窗口</h1>
-                <h2><time datetime="2014-06-19">
-                    2014-06-19
-                </time></h2>
-                <h2>tadegenban</h2>
-            </hgroup>
+                <aside>
+                    <p><time datetime="2014-06-19">
+                        Posted on 2014-06-19
+                    </time>
+                    by tadegenban</p>
+                </aside>
+            </header>
             <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
 <p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
