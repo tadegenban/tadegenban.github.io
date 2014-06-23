@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>TADEGENBAN</title>
-        <link>/index.html</link>
-        <atom:link href="/blog/index.rss" rel="self" type="application/rss+xml" />
+        <link>tadegenban.github.io/index.html</link>
+        <atom:link href="tadegenban.github.io/blog/index.rss" rel="self" type="application/rss+xml" />
         <description>Blog feed of TADEGENBAN</description>
         <generator>Statocles 0.013</generator>
         <item>
             <title>Markdown 语法</title>
-            <link>/blog/2014/06/19/markdown-guide.html</link>
-            <guid>/blog/2014/06/19/markdown-guide.html</guid>
+            <link>tadegenban.github.io/blog/2014/06/19/markdown-guide.html</link>
+            <guid>tadegenban.github.io/blog/2014/06/19/markdown-guide.html</guid>
             <description><![CDATA[
                 <h2>什么是Markdown</h2>
 
@@ -226,7 +226,7 @@
 
 <h4>自动链接</h4>
 
-<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#109;&#97;&#105;&#x6C;&#x74;&#x6F;:&#x74;&#101;&#115;&#116;&#64;&#x64;&#111;&#x6D;a&#105;&#x6E;&#46;&#99;&#111;m">&#x74;&#101;&#115;&#116;&#64;&#x64;&#111;&#x6D;a&#105;&#x6E;&#46;&#99;&#111;m</a>。</p>
+<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#109;a&#x69;&#x6C;t&#x6F;:&#116;&#101;&#115;&#x74;&#64;&#100;&#111;&#109;a&#x69;&#110;&#46;&#99;&#111;&#109;">&#116;&#101;&#115;&#x74;&#64;&#100;&#111;&#109;a&#x69;&#110;&#46;&#99;&#111;&#109;</a>。</p>
 
 <h4>分隔线</h4>
 
@@ -264,8 +264,8 @@
         </item>
         <item>
             <title>Emacs 自动分割窗口</title>
-            <link>/blog/2014/06/19/emacs-auto-split-windows.html</link>
-            <guid>/blog/2014/06/19/emacs-auto-split-windows.html</guid>
+            <link>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</link>
+            <guid>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</guid>
             <description><![CDATA[
                 <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 

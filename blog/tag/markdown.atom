@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>/blog/tag/markdown/index.html</id>
+    <id>tadegenban.github.io/blog/tag/markdown/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-06-23T22:08:56Z</updated>
-    <link rel="self" href="/blog/tag/markdown.atom"/>
-    <link rel="alternate" href="/blog/tag/markdown/index.html"/>
+    <updated>2014-06-23T22:14:30Z</updated>
+    <link rel="self" href="tadegenban.github.io/blog/tag/markdown.atom"/>
+    <link rel="alternate" href="tadegenban.github.io/blog/tag/markdown/index.html"/>
     <generator version="0.013">Statocles</generator>
     <entry>
-        <id>/blog/2014/06/19/markdown-guide.html</id>
+        <id>tadegenban.github.io/blog/2014/06/19/markdown-guide.html</id>
         <title>Markdown 语法</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="/blog/2014/06/19/markdown-guide.html" />
+        <link rel="alternate" href="tadegenban.github.io/blog/2014/06/19/markdown-guide.html" />
         <content type="html"><![CDATA[
             <h2>什么是Markdown</h2>
 
@@ -227,7 +227,7 @@
 
 <h4>自动链接</h4>
 
-<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#109;&#x61;&#105;&#x6C;&#116;&#x6F;:&#x74;&#x65;&#x73;&#116;&#64;&#100;&#111;&#x6D;&#97;&#x69;n&#x2E;&#x63;&#x6F;&#x6D;">&#x74;&#x65;&#x73;&#116;&#64;&#100;&#111;&#x6D;&#97;&#x69;n&#x2E;&#x63;&#x6F;&#x6D;</a>。</p>
+<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#109;&#x61;i&#x6C;&#x74;o:&#116;&#101;&#x73;&#x74;&#64;&#100;&#x6F;&#109;&#97;&#x69;&#110;&#46;&#x63;&#x6F;&#x6D;">&#116;&#101;&#x73;&#x74;&#64;&#100;&#x6F;&#109;&#97;&#x69;&#110;&#46;&#x63;&#x6F;&#x6D;</a>。</p>
 
 <h4>分隔线</h4>
 
@@ -260,7 +260,7 @@
 
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x2e2a448)" />
+        <category term="ARRAY(0x3a803d0)" />
     </entry>
 </feed>
 

@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>/blog/tag/emacs/index.html</id>
+    <id>tadegenban.github.io/blog/tag/emacs/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-06-23T22:08:56Z</updated>
-    <link rel="self" href="/blog/tag/emacs.atom"/>
-    <link rel="alternate" href="/blog/tag/emacs/index.html"/>
+    <updated>2014-06-23T22:14:30Z</updated>
+    <link rel="self" href="tadegenban.github.io/blog/tag/emacs.atom"/>
+    <link rel="alternate" href="tadegenban.github.io/blog/tag/emacs/index.html"/>
     <generator version="0.013">Statocles</generator>
     <entry>
-        <id>/blog/2014/06/19/emacs-auto-split-windows.html</id>
+        <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
         <title>Emacs 自动分割窗口</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="/blog/2014/06/19/emacs-auto-split-windows.html" />
+        <link rel="alternate" href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html" />
         <content type="html"><![CDATA[
             <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
@@ -28,7 +28,7 @@
 
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x2f33f80)" />
+        <category term="ARRAY(0x3b8a348)" />
     </entry>
 </feed>
 

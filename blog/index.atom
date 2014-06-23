@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>/index.html</id>
+    <id>tadegenban.github.io/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-06-23T22:08:55Z</updated>
-    <link rel="self" href="/blog/index.atom"/>
-    <link rel="alternate" href="/index.html"/>
+    <updated>2014-06-23T22:14:29Z</updated>
+    <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
+    <link rel="alternate" href="tadegenban.github.io/index.html"/>
     <generator version="0.013">Statocles</generator>
     <entry>
-        <id>/blog/2014/06/19/markdown-guide.html</id>
+        <id>tadegenban.github.io/blog/2014/06/19/markdown-guide.html</id>
         <title>Markdown 语法</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="/blog/2014/06/19/markdown-guide.html" />
+        <link rel="alternate" href="tadegenban.github.io/blog/2014/06/19/markdown-guide.html" />
         <content type="html"><![CDATA[
             <h2>什么是Markdown</h2>
 
@@ -227,7 +227,7 @@
 
 <h4>自动链接</h4>
 
-<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#109;&#97;i&#108;t&#111;:&#x74;&#101;&#x73;&#x74;&#64;&#100;&#111;m&#97;&#x69;&#110;&#x2E;c&#x6F;&#109;">&#x74;&#101;&#x73;&#x74;&#64;&#100;&#111;m&#97;&#x69;&#110;&#x2E;c&#x6F;&#109;</a>。</p>
+<p>使用<strong>尖括号</strong>，可以为输入的URL或者邮箱自动创建链接。如<a href="&#x6D;&#x61;ilto:&#116;&#101;&#x73;&#x74;&#64;&#100;&#111;&#x6D;&#97;&#105;&#110;&#46;&#x63;&#x6F;&#x6D;">&#116;&#101;&#x73;&#x74;&#64;&#100;&#111;&#x6D;&#97;&#105;&#110;&#46;&#x63;&#x6F;&#x6D;</a>。</p>
 
 <h4>分隔线</h4>
 
@@ -260,13 +260,13 @@
 
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x2e2a448)" />
+        <category term="ARRAY(0x3a803d0)" />
     </entry>
     <entry>
-        <id>/blog/2014/06/19/emacs-auto-split-windows.html</id>
+        <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
         <title>Emacs 自动分割窗口</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="/blog/2014/06/19/emacs-auto-split-windows.html" />
+        <link rel="alternate" href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html" />
         <content type="html"><![CDATA[
             <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
@@ -284,7 +284,7 @@
 
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x2f33f80)" />
+        <category term="ARRAY(0x3b8a348)" />
     </entry>
 </feed>
 
