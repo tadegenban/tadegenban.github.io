@@ -1,62 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <title>TADEGENBAN</title>
-        <style type="text/css">
-            article > hgroup > h1,
-            main > hgroup > h1
-            {
-                border-bottom: 4px solid #045578;
-            }
-            header aside {
-                margin-top: 0;
-                font-size: 12pt;
-            }
-            .sidebar h1 {
-                font-size: 14pt;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
-                <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="/">TADEGENBAN</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="top-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li><a href="/index.html">Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="main container">
-            <div class="row">
-
-    <div class="col-md-9">
-        <main>
-            <header>
-                <h1>tools for silvaco</h1>
-                <aside>
-                    <p><time datetime="2014-06-25">
-                        Posted on 2014-06-25
-                    </time>
-                    by tadegenban</p>
-                </aside>
-            </header>
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>tadegenban.github.io/blog/tag/silvaco/index.html</id>
+    <title>TADEGENBAN</title>
+    <updated>2014-06-25T22:21:13Z</updated>
+    <link rel="self" href="tadegenban.github.io/blog/tag/silvaco.atom"/>
+    <link rel="alternate" href="tadegenban.github.io/blog/tag/silvaco/index.html"/>
+    <generator version="0.013">Statocles</generator>
+    <entry>
+        <id>tadegenban.github.io/blog/2014/06/25/tools-for-silvaco.html</id>
+        <title>tools for silvaco</title>
+        <author><name>tadegenban</name></author>
+        <link rel="alternate" href="tadegenban.github.io/blog/2014/06/25/tools-for-silvaco.html" />
+        <content type="html"><![CDATA[
             <h2>mathematica</h2>
 
 <h3>silvaco文件解释</h3>
@@ -161,22 +116,9 @@
 <li>目录: E:\gawk\workspace\Silvaco\logMaker</li>
 </ul>
 
-        </main>
-    </div>
+        ]]></content>
+        <updated>2014-06-25T00:00:00Z</updated>
+        <category term="ARRAY(0x3c4a9b8)" />
+    </entry>
+</feed>
 
-    <div class="col-md-3">
-        <nav id="tags">
-            <h1>Tags</h1>
-            <ul class="list-inline">
-                <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
-                <li><a href="/blog/tag/markdown/index.html">markdown</a></li>
-                <li><a href="/blog/tag/silvaco/index.html">silvaco</a></li>
-            </ul>
-        </nav>
-    </div>
-
-</div>
-
-        </div>
-    </body>
-</html>
