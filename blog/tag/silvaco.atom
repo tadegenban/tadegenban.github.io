@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/blog/tag/silvaco/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-06-25T22:21:13Z</updated>
+    <updated>2014-08-18T21:21:20Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/tag/silvaco.atom"/>
     <link rel="alternate" href="tadegenban.github.io/blog/tag/silvaco/index.html"/>
     <generator version="0.013">Statocles</generator>
@@ -19,7 +19,6 @@
 <ul>
 <li>状态: 维护</li>
 <li>功能: 提供对silvaco的str文件和log文件，内部数据的意义解释，从而可以对其数据操作，提取，计算，得到想要的数据。</li>
-<li>目录: e:/mathmatica/file/silvaco数据读取/文件解释</li>
 <li><p>特别: 集成于nbassemble中</p>
 
 <h3>数据提取</h3></li>
@@ -32,7 +31,6 @@
 <li>silvaco数据读取temperature掺杂浓度.nb 为更改了复合模型之前，最后可用版本</li>
 </ul></li>
 </ul></li>
-<li>目录: e:/mathematica/file/silvaco数据提取</li>
 </ul>
 
 <h2>gawk</h2>
@@ -50,7 +48,6 @@
 <li>batman.bat 批处理</li>
 </ul></li>
 </ul></li>
-<li>目录: E:\gawk\workspace\Silvaco\strExtract</li>
 </ul>
 
 <h3>strModify</h3>
@@ -58,7 +55,6 @@
 <ul>
 <li>状态: 维护</li>
 <li>功能: 修改str文件中某项数据，需要自定义</li>
-<li>目录: E:\gawk\workspace\Silvaco\strModify</li>
 </ul>
 
 <h3>voaCalc</h3>
@@ -73,7 +69,6 @@
 <li>请自定义电极名称</li>
 </ul></li>
 </ul></li>
-<li>目录: E:\gawk\workspace\Silvaco\voaCalc</li>
 </ul>
 
 <h3>logExtract</h3>
@@ -82,7 +77,6 @@
 <li>状态: 维护</li>
 <li>功能: 提取log文件指定数据（一列），输出为一行</li>
 <li>目录: E:\gawk\workspace\Silvaco\logExtract</li>
-<li>特别: 完成度低，只有logExtractOneColumn.gawk可用</li>
 </ul>
 
 <h3>logMaker</h3>
@@ -90,7 +84,6 @@
 <ul>
 <li>状态: 维护</li>
 <li>功能: 将已有数据导入，生成简单的log文件，以供tonyplot</li>
-<li>目录: E:\gawk\workspace\Silvaco\logMaker</li>
 </ul>
 
 <h3>TransientExtract</h3>
@@ -104,7 +97,6 @@
 <li>implant.awk                   将上述程序提取出的数据，插入原log文件相应位置。</li>
 <li>TEbatch.bat                   批处理命令，调用上述awk程序，自动完成数据提取及修改。</li>
 </ul></li>
-<li>目录: E:\gawk\workspace\Silvaco\TransientExtract</li>
 <li>特别: 目前是提取温度，可以自定义修改想要提取的数据。</li>
 </ul>
 
@@ -113,12 +105,11 @@
 <ul>
 <li>状态: 维护</li>
 <li>功能: 选择排序</li>
-<li>目录: E:\gawk\workspace\Silvaco\logMaker</li>
 </ul>
 
         ]]></content>
         <updated>2014-06-25T00:00:00Z</updated>
-        <category term="ARRAY(0x3c4a9b8)" />
+        <category term="ARRAY(0x3fef658)" />
     </entry>
 </feed>
 
