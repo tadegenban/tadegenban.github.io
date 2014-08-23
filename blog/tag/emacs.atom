@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/blog/tag/emacs/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-08-23T10:21:36Z</updated>
+    <updated>2014-08-23T10:26:38Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/tag/emacs.atom"/>
     <link rel="alternate" href="tadegenban.github.io/blog/tag/emacs/index.html"/>
     <generator version="0.013">Statocles</generator>
@@ -28,7 +28,7 @@
 
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x4118778)" />
+        <category term="ARRAY(0x2889778)" />
     </entry>
 </feed>
 
