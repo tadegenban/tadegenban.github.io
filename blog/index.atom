@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-09-23T22:09:26Z</updated>
+    <updated>2014-09-23T22:12:07Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
     <link rel="alternate" href="tadegenban.github.io/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -14,7 +14,7 @@
         <content type="html"><![CDATA[
             <h1>"nothing" -- 包作用域， 全局变量</h1>
 
-<pre><code>$foo
+<pre><code>$foo = 1;
 </code></pre>
 
 <p>在perl早期的时候，大家都是这么定义变量的。
@@ -35,7 +35,7 @@ sub f {
 
 <h1>my -- 词法作用域， 局部变量</h1>
 
-<pre><code>my $foo
+<pre><code>my $foo = 1;
 </code></pre>
 
 <p>my 的出现，极大的解决了变量污染的问题，因为my所声明的变量是局部变量，词法作用域。
@@ -69,11 +69,19 @@ my基本上已经够用了，下面来看看our</p>
 
 <h1>our -- 包作用域， 全局变量</h1>
 
+<p>...</p>
+
 <h1>local -- 包作用域, 全局变量的假名</h1>
+
+<p>...</p>
 
 <h1>state -- 词法作用域, 静态变量</h1>
 
+<p>...</p>
+
 <h1>总结</h1>
+
+<p>...</p>
 
                 <p><a href="tadegenban.github.io/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
             <p>Tags:
@@ -81,7 +89,7 @@ my基本上已经够用了，下面来看看our</p>
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x45ee310)" />
+        <category term="ARRAY(0x3273918)" />
     </entry>
     <entry>
         <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
@@ -109,7 +117,7 @@ my基本上已经够用了，下面来看看our</p>
             </p>
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x45e70c8)" />
+        <category term="ARRAY(0x32740c8)" />
     </entry>
 </feed>
 
