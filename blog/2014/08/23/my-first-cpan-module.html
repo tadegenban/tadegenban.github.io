@@ -70,7 +70,6 @@
                     </div>
                 </div>
             </nav>
-            
         </header>
         <div class="main container">
             <div class="row">
@@ -78,43 +77,46 @@
     <div class="col-md-9">
         <main>
             <header>
-                <h1>Emacs 自动分割窗口</h1>
+                <h1>我的第一个CPAN模块 -- Games::FrogJump</h1>
                 <p class="tags">Tags:
-                    <a href="/blog/tag/emacs/index.html" rel="tag">emacs</a>
+                    <a href="/blog/tag/perl-CPAN/index.html" rel="tag">perl CPAN</a>
                 </p>
                 <aside>
-                    <p><time datetime="2014-06-19">
-                        Posted on 2014-06-19
+                    <p><time datetime="2014-08-23">
+                        Posted on 2014-08-23
                     </time>
                     by tadegenban</p>
                 </aside>
             </header>
             <section id="section-1">
-                <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
+                <h2>CPAN and metacpan.org</h2>
 
-<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
+<p>CPAN(Comprehensive Perl Archive Network) 是perl最强大的武器，拥有超过 130,000 多个模块, 10,000多个作者</p>
 
-<p>来每次启动的时候自动分割窗口，如下,</p>
+<p>而metacpan.org近几年出现的CPAN search engine, 提供了对CPAN模块的搜索支持，user friendly的UI,很好的文档展示,</p>
 
-<pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
-                           (select-window-2)
-                           (split-window-vertically) )
-      )
-</code></pre>
+<p>作者信息,"++"来给模块开发者点赞,依赖树，反向依赖等等，所以现在metacpan已经成为大家在CPAN搜索模块的首选。（PS metacpan的logo四个
+红点真的很赞）sd</p>
 
-<p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
+<p>相比Python的PyPi,Ruby的RubyGems,Node.js的npm,PHP的Packagist,也有很多过人之处，<a href="http://perltricks.com/article/110/2014/8/21/Who-has-the-best-package-manager--Part-one">这里</a>有一个详细的对比。</p>
+
+<h2>Games::FrogJump</h2>
+
+<p>灵感来自于<a href="https://metacpan.org/pod/Games::2048">Games::2048</a>,当时看这个代码作为学习用Moo写oop的例子，后来想到自己可以
+实现一个类似的游戏，就利用几天下班时间把它写出来，当我第一次把它上传到CPAN时，就收到了<a href="https://metacpan.org/author/SHARYANTO">Steven Haryanto</a>的邮件，他提出了几个bug和建议，让我非常激动，让我觉得这几天的工作都是值得。</p>
+
+<h2>上传模块到CPAN</h2>
 
             </section>
         </main>
     </div>
 
     <div class="col-md-3">
-        
         <nav id="tags">
             <h1>Tags</h1>
             <ul class="list-inline">
                 <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
-                <li><a href="/blog/tag/perl/index.html">perl</a></li>
+                <li><a href="/blog/tag/perl-CPAN/index.html">perl CPAN</a></li>
             </ul>
         </nav>
     </div>
@@ -122,6 +124,5 @@
 </div>
 
         </div>
-        
     </body>
 </html>

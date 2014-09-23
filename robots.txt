@@ -1,0 +1,3 @@
+Sitemap: tadegenban.github.io/sitemap.xml
+User-Agent: *
+Disallow: 

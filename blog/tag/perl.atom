@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>tadegenban.github.io/index.html</id>
+    <id>tadegenban.github.io/blog/tag/perl/index.html</id>
     <title>TADEGENBAN</title>
     <updated>2014-09-23T22:09:26Z</updated>
-    <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
-    <link rel="alternate" href="tadegenban.github.io/index.html"/>
+    <link rel="self" href="tadegenban.github.io/blog/tag/perl.atom"/>
+    <link rel="alternate" href="tadegenban.github.io/blog/tag/perl/index.html"/>
     <generator version="0.022">Statocles</generator>
     <entry>
         <id>tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</id>
@@ -82,34 +82,6 @@ my基本上已经够用了，下面来看看our</p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
         <category term="ARRAY(0x45ee310)" />
-    </entry>
-    <entry>
-        <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
-        <title>Emacs 自动分割窗口</title>
-        <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html" />
-        <content type="html"><![CDATA[
-            <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
-
-<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
-
-<p>来每次启动的时候自动分割窗口，如下,</p>
-
-<pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
-                           (select-window-2)
-                           (split-window-vertically) )
-      )
-</code></pre>
-
-<p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
-
-                <p><a href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
-            <p>Tags:
-                <a href="/blog/tag/emacs/index.html">emacs</a>
-            </p>
-        ]]></content>
-        <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x45e70c8)" />
     </entry>
 </feed>
 

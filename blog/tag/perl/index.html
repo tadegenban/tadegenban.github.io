@@ -47,8 +47,8 @@
             }
 
         </style>
-            <link rel="alternate" href="/blog/index.atom" type="application/atom+xml" />
-            <link rel="alternate" href="/blog/index.rss" type="application/rss+xml" />
+            <link rel="alternate" href="/blog/tag/perl.atom" type="application/atom+xml" />
+            <link rel="alternate" href="/blog/tag/perl.rss" type="application/rss+xml" />
     </head>
     <body>
         <header>
@@ -157,34 +157,6 @@ my基本上已经够用了，下面来看看our</p>
 <h1>总结</h1>
 
             </article>
-            <article>
-                <header>
-                    <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs 自动分割窗口</a></h1>
-                    <p class="tags">Tags:
-                        <a href="/blog/tag/emacs/index.html" rel="tag">emacs</a>
-                    </p>
-                    <aside>
-                        <p><time datetime="2014-06-19">
-                            Posted on 2014-06-19
-                        </time>
-                        by tadegenban</p>
-                    </aside>
-                </header>
-                <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
-
-<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
-
-<p>来每次启动的时候自动分割窗口，如下,</p>
-
-<pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
-                           (select-window-2)
-                           (split-window-vertically) )
-      )
-</code></pre>
-
-<p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
-
-            </article>
         </main>
         <ul class="pager">
             <li class="previous disabled">
@@ -206,12 +178,12 @@ my基本上已经够用了，下面来看看our</p>
         <h1>Feeds</h1>
         <ul class="list-inline">
             <li>
-                <a href="/blog/index.atom" rel="alternate" type="application/atom+xml">
+                <a href="/blog/tag/perl.atom" rel="alternate" type="application/atom+xml">
                     Atom
                 </a>
             </li>
             <li>
-                <a href="/blog/index.rss" rel="alternate" type="application/rss+xml">
+                <a href="/blog/tag/perl.rss" rel="alternate" type="application/rss+xml">
                     RSS
                 </a>
             </li>

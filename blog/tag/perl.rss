@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>TADEGENBAN</title>
-        <link>tadegenban.github.io/index.html</link>
-        <atom:link href="tadegenban.github.io/blog/index.rss" rel="self" type="application/rss+xml" />
+        <link>tadegenban.github.io/blog/tag/perl/index.html</link>
+        <atom:link href="tadegenban.github.io/blog/tag/perl.rss" rel="self" type="application/rss+xml" />
         <description>Blog feed of TADEGENBAN</description>
         <generator>Statocles 0.022</generator>
         <item>
@@ -81,34 +81,6 @@ my基本上已经够用了，下面来看看our</p>
             ]]></description>
             <pubDate>
                 二, 23  9月 2014 00:00:00 +0800
-            </pubDate>
-        </item>
-        <item>
-            <title>Emacs 自动分割窗口</title>
-            <link>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</link>
-            <guid>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</guid>
-            <description><![CDATA[
-                <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
-
-<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
-
-<p>来每次启动的时候自动分割窗口，如下,</p>
-
-<pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
-                           (select-window-2)
-                           (split-window-vertically) )
-      )
-</code></pre>
-
-<p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
-
-                    <p><a href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
-                <p>Tags:
-                    <a href="/blog/tag/emacs/index.html">emacs</a>
-                </p>
-            ]]></description>
-            <pubDate>
-                四, 19  6月 2014 00:00:00 +0800
             </pubDate>
         </item>
     </channel>

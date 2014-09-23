@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>tadegenban.github.io/blog/tag/perl-CPAN/index.html</id>
+    <title>TADEGENBAN</title>
+    <updated>2014-08-23T15:41:37Z</updated>
+    <link rel="self" href="tadegenban.github.io/blog/tag/perl-CPAN.atom"/>
+    <link rel="alternate" href="tadegenban.github.io/blog/tag/perl-CPAN/index.html"/>
+    <generator version="0.020">Statocles</generator>
+    <entry>
+        <id>tadegenban.github.io/blog/2014/08/23/my-first-cpan-module.html</id>
+        <title>我的第一个CPAN模块 -- Games::FrogJump</title>
+        <author><name>tadegenban</name></author>
+        <link rel="alternate" href="tadegenban.github.io/blog/2014/08/23/my-first-cpan-module.html" />
+        <content type="html"><![CDATA[
+            <h2>CPAN and metacpan.org</h2>
+
+<p>CPAN(Comprehensive Perl Archive Network) 是perl最强大的武器，拥有超过 130,000 多个模块, 10,000多个作者</p>
+
+<p>而metacpan.org近几年出现的CPAN search engine, 提供了对CPAN模块的搜索支持，user friendly的UI,很好的文档展示,</p>
+
+<p>作者信息,"++"来给模块开发者点赞,依赖树，反向依赖等等，所以现在metacpan已经成为大家在CPAN搜索模块的首选。（PS metacpan的logo四个
+红点真的很赞）sd</p>
+
+<p>相比Python的PyPi,Ruby的RubyGems,Node.js的npm,PHP的Packagist,也有很多过人之处，<a href="http://perltricks.com/article/110/2014/8/21/Who-has-the-best-package-manager--Part-one">这里</a>有一个详细的对比。</p>
+
+<h2>Games::FrogJump</h2>
+
+<p>灵感来自于<a href="https://metacpan.org/pod/Games::2048">Games::2048</a>,当时看这个代码作为学习用Moo写oop的例子，后来想到自己可以
+实现一个类似的游戏，就利用几天下班时间把它写出来，当我第一次把它上传到CPAN时，就收到了<a href="https://metacpan.org/author/SHARYANTO">Steven Haryanto</a>的邮件，他提出了几个bug和建议，让我非常激动，让我觉得这几天的工作都是值得。</p>
+
+<h2>上传模块到CPAN</h2>
+
+                <p><a href="tadegenban.github.io/blog/2014/08/23/my-first-cpan-module.html#section-2">Continue reading...</a></p>
+            <p>Tags:
+                <a href="/blog/tag/perl-CPAN/index.html">perl CPAN</a>
+            </p>
+        ]]></content>
+        <updated>2014-08-23T00:00:00Z</updated>
+        <category term="ARRAY(0x39639a8)" />
+    </entry>
+</feed>
+
