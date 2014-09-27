@@ -78,7 +78,7 @@
     <div class="col-md-9">
         <main>
             <header>
-                <h1>perl 变量作用域 my our local state</h1>
+                <h1>perl 变量 my our local state</h1>
                 <p class="tags">Tags:
                     <a href="/blog/tag/perl/index.html" rel="tag">perl</a>
                 </p>
@@ -90,7 +90,20 @@
                 </aside>
             </header>
             <section id="section-1">
-                <h1>"nothing" -- 包作用域， 全局变量</h1>
+                <h1>perl 变量类型与作用域</h1>
+
+<p>根据作用域的不同，perl有两种变量类型：
+- 词法变量(Lexical Variable) -- 词法作用域，只在当前词法作用域内可见。
+- 包变量(Package Variable)  -- 全局变量，在任何位置可见</p>
+
+<p>有三种创建变量的方式：
+- my  -- 创建一个词法变量
+- our -- 创建一个词法变量，但实际上是包变量的别名，或者说是伪装成词法变量的包变量
+- 直接使用 -- 不加任何声明的使用一个变量，将创建一个包变量</p>
+
+<p>下面我们详细说一下这几种方式</p>
+
+<h1>" $foo " -- 模块变量， 全局变量</h1>
 
 <pre><code>$foo = 1;
 </code></pre>
@@ -99,17 +112,21 @@
 
 <p>这么定义变量$foo将会是全局变量，也就是在程序的任何位置都能访问到它。</p>
 
-<p>这样当代码比较长时，会导致一个严重的问题，变量污染，比如：</p>
+<p>这样当随着代码规模的增长，会引起一个严重的问题，变量污染，比如：</p>
 
-<pre><code>$foo = 1; // $foo -&gt; 1
+<pre><code>$foo = 1; # $foo -&gt; 1
 f();
-          // $foo -&gt; 2
+          # $foo -&gt; 2
 sub f {
    $foo = 2;
 }
 </code></pre>
 
 <p>如果不小心命名，则很容易在某个意想不到的位置，变量$foo被赋值，出现bug。</p>
+
+<p>所以 perl5 引进了strict 和warnings 两个pragma,在代码上加上use strict后，所有没有</p>
+
+<p>直接声明而使用的变量都会报错。</p>
 
 <p>所以现在这种用法已经废弃了，在一些教程书中会这么开始教学，但这种用法在实际代码中是绝对不建议再使用的。</p>
 
@@ -120,42 +137,72 @@ sub f {
 <pre><code>my $foo = 1;
 </code></pre>
 
-<p>my 的出现，极大的解决了变量污染的问题，因为my所声明的变量是局部变量，词法作用域。</p>
+<p>my 的出现，极大的解决了变量污染的问题，因为my所声明的变量是 -- 局部变量，词法作用域。</p>
 
 <p>局部变量的概念，比较好理解，比如：</p>
 
-<pre><code>my $foo = 1; // $foo -&gt; 1
+<pre><code>my $foo = 1; # $foo -&gt; 1
 f();
-             // $foo -&gt; 1
+             # $foo -&gt; 1
 sub f {
-   my $foo = 2 // $foo -&gt; 2
+   my $foo = 2 # $foo -&gt; 2
 }
 </code></pre>
 
 <p>在函数f中的$foo 之在局部范围内起作用，出了函数之后，就不再起作用，所以也就不会影响到外部的$foo</p>
 
-<p>需要理解的是这里的词法作用域，这里一个词法作用域，基本上就是一个BLOCK，也就是一个花括号阔住的范围。</p>
+<p>需要理解的是这里的词法作用域，词法作用域限制了局部变量的名字生存的范围，这里一个词法作用域，基本上就是一个BLOCK，也就是一个花括号阔住的范围。</p>
 
-<p>所以，只要一个BLOCK就会建立一个词法作用域，比如：</p>
+<p>所以，只要有一个BLOCK就会建立一个词法作用域，比如：</p>
 
-<pre><code>my $foo = 1; // $foo -&gt; 1
+<pre><code>my $foo = 1; # $foo -&gt; 1
 f();
-             // $foo -&gt; 1
+             # $foo -&gt; 1
 sub f {
-    my $foo = 2 // $foo -&gt; 2
+    my $foo = 2 # $foo -&gt; 2
     if ( 1 ) {
-        my $foo = 3 // $foo -&gt; 3
+        my $foo = 3 # $foo -&gt; 3
     }
 }
 </code></pre>
 
 <p>这里在函数f内部的if语句中，建立一个新的词法作用域，同样对这里的$foo赋值不会影响到外部的$foo</p>
 
-<p>my基本上已经够用了，下面来看看our</p>
+<p>my基本上已经够用了，然而由于之前提到的strict 和warnings ,导致不能使用全局变量。</p>
 
-<h1>our -- 包作用域， 全局变量</h1>
+<p>因此出现了our</p>
 
-<p>...</p>
+<h1>our -- ， 模块变量, 全局变量, 词法作用域</h1>
+
+<pre><code>our $foo = 1;
+</code></pre>
+
+<p>our 的出现解决了不能使用全局变量的问题，our所声明的变量是全局变量的词法作用域的别名。</p>
+
+<p>意思就是，这里$foo是$main::foo的别名，如果是在模块MyModule中声明的话，就是$MyModule::foo.</p>
+
+<p>但是它同时又是词法作用域的，所以在词法作用域范围外无法访问到它，只能通过模块变量名$MyModule::foo来访问</p>
+
+<p>可以说 our 所声明的变量是伪装成词法变量的全局变量。</p>
+
+<p>举个例子：</p>
+
+<pre><code>package A;
+
+{
+    our $foo = 1;
+    print $foo;     # 1
+}
+print $foo;         # error
+print $A::foo;      # 1
+
+package B;
+print $A::foo;      # 1
+</code></pre>
+
+<p>这里在花括号之外将无法访问到$foo, 但能通过模块变量名来访问 $A::foo</p>
+
+<p>在模块B中，也能通过$A::foo来访问模块A所定义的变量。</p>
 
 <h1>local -- 包作用域, 全局变量的假名</h1>
 
