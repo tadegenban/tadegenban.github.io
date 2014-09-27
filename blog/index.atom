@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-09-27T12:22:53Z</updated>
+    <updated>2014-09-27T12:24:20Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
     <link rel="alternate" href="tadegenban.github.io/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -14,14 +14,20 @@
         <content type="html"><![CDATA[
             <h1>perl 变量类型与作用域</h1>
 
-<p>根据作用域的不同，perl有两种变量类型：
-- 词法变量(Lexical Variable) -- 词法作用域，只在当前词法作用域内可见。
-- 包变量(Package Variable)  -- 全局变量，在任何位置可见</p>
+<p>根据作用域的不同，perl有两种变量类型：</p>
 
-<p>有三种创建变量的方式：
-- my  -- 创建一个词法变量
-- our -- 创建一个词法变量，但实际上是包变量的别名，或者说是伪装成词法变量的包变量
-- 直接使用 -- 不加任何声明的使用一个变量，将创建一个包变量</p>
+<ul>
+<li><p>词法变量(Lexical Variable) -- 词法作用域，只在当前词法作用域内可见。</p></li>
+<li><p>包变量(Package Variable)  -- 全局变量，在任何位置可见</p></li>
+</ul>
+
+<p>有三种创建变量的方式：</p>
+
+<ul>
+<li><p>my  -- 创建一个词法变量</p></li>
+<li><p>our -- 创建一个词法变量，但实际上是包变量的别名，或者说是伪装成词法变量的包变量</p></li>
+<li><p>直接使用 -- 不加任何声明的使用一个变量，将创建一个包变量</p></li>
+</ul>
 
 <p>下面我们详细说一下这几种方式</p>
 
@@ -144,7 +150,7 @@ print $A::foo;      # 1
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x2f08318)" />
+        <category term="ARRAY(0x466e318)" />
     </entry>
     <entry>
         <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
@@ -172,7 +178,7 @@ print $A::foo;      # 1
             </p>
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x2f35a30)" />
+        <category term="ARRAY(0x469ba30)" />
     </entry>
 </feed>
 
