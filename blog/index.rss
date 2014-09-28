@@ -11,9 +11,9 @@
             <link>tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</link>
             <guid>tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</guid>
             <description><![CDATA[
-                <h1>perl 变量类型与作用域</h1>
+                <h2>perl 变量类型与作用域</h2>
 
-<p>根据作用域的不同，perl有两种变量类型：</p>
+<p>根据作用域的不同来区分，perl有两种变量类型：</p>
 
 <ul>
 <li><p>词法变量(Lexical Variable) -- 词法作用域，只在当前词法作用域内可见。</p></li>
@@ -30,12 +30,12 @@
 
 <p>下面我们详细说一下这几种方式</p>
 
-<h1>" $foo " -- 模块变量， 全局变量</h1>
+<h2>直接使用  -- 包变量</h2>
 
 <pre><code>$foo = 1;
 </code></pre>
 
-<p>在perl早期的时候，大家都是这么定义变量的。</p>
+<p>在perl早期的时候，大家都是这么定义，使用变量的。</p>
 
 <p>这么定义变量$foo将会是全局变量，也就是在程序的任何位置都能访问到它。</p>
 
@@ -59,7 +59,7 @@ sub f {
 
 <p>取而代之的是 my</p>
 
-<h1>my -- 词法作用域， 局部变量</h1>
+<h2>my -- 词法变量</h2>
 
 <pre><code>my $foo = 1;
 </code></pre>
@@ -99,7 +99,7 @@ sub f {
 
 <p>因此出现了our</p>
 
-<h1>our -- ， 模块变量, 全局变量, 词法作用域</h1>
+<h2>our -- ， 伪装成词法变量的包变量</h2>
 
 <pre><code>our $foo = 1;
 </code></pre>
@@ -131,17 +131,86 @@ print $A::foo;      # 1
 
 <p>在模块B中，也能通过$A::foo来访问模块A所定义的变量。</p>
 
-<h1>local -- 包作用域, 全局变量的假名</h1>
+<h2>local -- 包变量的临时赋值</h2>
 
-<p>...</p>
+<pre><code>local $foo = 1;
+</code></pre>
 
-<h1>state -- 词法作用域, 静态变量</h1>
+<p>local 并不创建一个新的变量，而是对已有的包变量临时赋予一个值，在退出当前scope后将原来的值还回去。</p>
 
-<p>...</p>
+<pre><code>$foo = 1;                 # $foo -&gt; 1
+{
+    local $foo = 2;       # $foo -&gt; 2  将原先的$foo藏起来，赋予一个临时的值
+}
+$foo                      # $foo -&gt; 1  将藏起来的值还回去
+</code></pre>
+
+<p>看起来有点像my,local确实是在my出现以前的解决方案，在my出来之后，使用的情形也就不多了。</p>
+
+<p>比较有意思的是，local是动态作用域，什么意思呢？ 我们比较一下下面两个代码：</p>
+
+<pre><code>my $foo = 1;
+{
+    my $foo = 2;
+    f();
+}
+sub f {
+    print "foo is $foo";
+}
+</code></pre>
+
+<p>结果是</p>
+
+<pre><code>foo is 1
+</code></pre>
+
+<p>因为词法作用域的$foo对函数f也是不可见的,函数f看到的是在最外层的$foo,而local就不同了</p>
+
+<pre><code>$foo = 1;
+{
+    local $foo = 2;
+    f();
+}
+sub f {
+    print "foo is $foo";
+}
+</code></pre>
+
+<p>结果是</p>
+
+<pre><code>foo is 2
+</code></pre>
+
+<p>这就是动态作用域，对一般的代码来说，local的适用范围并不广，因为本身全局变量就是不提倡使用的，而local只对全局变量起作用，</p>
+
+<p>可能有些时候你需要对内建的全局变量比如 $/, $_ 临时赋值，这时候会用到local。</p>
+
+<h1>state -- 词法变量,静态变量</h1>
+
+<pre><code>state $foo = 1;
+</code></pre>
+
+<p>state比较好理解，它就像c中的静态变量一样，只在第一次调用时候创建该变量，之后都是操作的同一个变量</p>
+
+<p>state也是词法变量，所以只在定义该变量的词法作用域中有效，举个例子：</p>
+
+<pre><code>sub count {
+    state $counter = 0;
+    $counter++;
+    return $counter;
+}
+say count();
+say count();
+say count();
+</code></pre>
 
 <h1>总结</h1>
 
-<p>...</p>
+<p>因为perl的向下兼容性做的非常好（相比Python），所以perl也抗了很多历史包袱，比如这里提到的不声明直接使用的全局变量。</p>
+
+<p>现在提倡的用法是变量都用my声明，在需要全局包变量的情况下，用our声明，所有代码前都要加上use strict 和use warnings</p>
+
+<p>这两个pragma, 在某些特定的时候会需要local 和 static 。</p>
 
                     <p><a href="tadegenban.github.io/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
                 <p>Tags:
