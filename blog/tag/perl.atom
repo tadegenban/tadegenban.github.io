@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/blog/tag/perl/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-10-11T11:00:58Z</updated>
+    <updated>2014-10-11T11:05:22Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/tag/perl.atom"/>
     <link rel="alternate" href="tadegenban.github.io/blog/tag/perl/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -219,7 +219,7 @@ say count();
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x3a8ffd0)" />
+        <category term="ARRAY(0x2df3fd0)" />
     </entry>
 </feed>
 
