@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/blog/tag/perl-Moo-oop/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-10-11T11:05:22Z</updated>
+    <updated>2014-10-11T11:06:01Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/tag/perl-Moo-oop.atom"/>
     <link rel="alternate" href="tadegenban.github.io/blog/tag/perl-Moo-oop/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -73,7 +73,7 @@ $lip-&gt;intro();
             </p>
         ]]></content>
         <updated>2014-10-11T00:00:00Z</updated>
-        <category term="ARRAY(0x2de4140)" />
+        <category term="ARRAY(0x4780680)" />
     </entry>
 </feed>
 

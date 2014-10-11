@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-10-11T11:05:22Z</updated>
+    <updated>2014-10-11T11:06:01Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
     <link rel="alternate" href="tadegenban.github.io/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -73,7 +73,7 @@ $lip-&gt;intro();
             </p>
         ]]></content>
         <updated>2014-10-11T00:00:00Z</updated>
-        <category term="ARRAY(0x2de4140)" />
+        <category term="ARRAY(0x4780680)" />
     </entry>
     <entry>
         <id>tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</id>
@@ -288,7 +288,7 @@ say count();
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x2df3fd0)" />
+        <category term="ARRAY(0x47b5ff0)" />
     </entry>
     <entry>
         <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
@@ -316,7 +316,7 @@ say count();
             </p>
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x2de3870)" />
+        <category term="ARRAY(0x477fdb0)" />
     </entry>
 </feed>
 
