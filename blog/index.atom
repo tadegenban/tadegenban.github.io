@@ -2,10 +2,57 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-10-11T10:13:09Z</updated>
+    <updated>2014-10-11T10:47:49Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
     <link rel="alternate" href="tadegenban.github.io/index.html"/>
     <generator version="0.022">Statocles</generator>
+    <entry>
+        <id>tadegenban.github.io/blog/2014/10/11/moo-introduction.html</id>
+        <title>用Moo来写面向对象perl</title>
+        <author><name>tadegenban</name></author>
+        <link rel="alternate" href="tadegenban.github.io/blog/2014/10/11/moo-introduction.html" />
+        <content type="html"><![CDATA[
+            <h2>Moose 大家庭</h2>
+
+<p>perl的原生的面向对象是比较简陋的，自从出现了Moose之后，perl的面向对象就很富有表现力了</p>
+
+<p>Moose -> Moos -> Moo -> Mo -> M, 再加上Mouse， 构成了Moose大家庭</p>
+
+<p>从Moose到M依次功能递减， M 代表 nothing， 在不太复杂的项目一般用Moo就足够了</p>
+
+<p>这里简单介绍一下Moo的用法</p>
+
+<h2>Moo -- 轻量级面向对象</h2>
+
+<p>比如我要建立一个Person对象，用Moo可以这么写:</p>
+
+<pre><code>package Person;
+use Moo;
+
+has name =&gt; is =&gt; 'rw';
+has age  =&gt; is =&gt; 'rw';
+
+sub intro {
+    my $self = shift;
+    print "My name is ". $self-&gt;name;
+}
+</code></pre>
+
+<p>在你的代码里就可以这么建立一个Person对象:
+    use Person;</p>
+
+<pre><code>my $lip = Person-&gt;new(name =&gt; 'lip', age =&gt; 18 );
+$lip-&gt;intro();
+</code></pre>
+
+                <p><a href="tadegenban.github.io/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
+            <p>Tags:
+                <a href="/blog/tag/perl-Moo-oop/index.html">perl Moo oop</a>
+            </p>
+        ]]></content>
+        <updated>2014-10-11T00:00:00Z</updated>
+        <category term="ARRAY(0x35dc140)" />
+    </entry>
     <entry>
         <id>tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</id>
         <title>perl 变量 my our local state</title>
@@ -219,7 +266,7 @@ say count();
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x4558918)" />
+        <category term="ARRAY(0x35ebfd0)" />
     </entry>
     <entry>
         <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
@@ -247,7 +294,7 @@ say count();
             </p>
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x45590c8)" />
+        <category term="ARRAY(0x35e34f0)" />
     </entry>
 </feed>
 
