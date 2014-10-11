@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/blog/tag/perl-Moo-oop/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-10-11T10:47:49Z</updated>
+    <updated>2014-10-11T10:54:40Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/tag/perl-Moo-oop.atom"/>
     <link rel="alternate" href="tadegenban.github.io/blog/tag/perl-Moo-oop/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -14,7 +14,9 @@
         <content type="html"><![CDATA[
             <h2>Moose 大家庭</h2>
 
-<p>perl的原生的面向对象是比较简陋的，自从出现了Moose之后，perl的面向对象就很富有表现力了</p>
+<p>perl的原生的面向对象是比较简单的，通过bless关键字和hash来建立对象，很灵活但也很简陋。</p>
+
+<p>自从出现了Moose之后，perl的面向对象就很富有表现力了。</p>
 
 <p>Moose -> Moos -> Moo -> Mo -> M, 再加上Mouse， 构成了Moose大家庭</p>
 
@@ -38,10 +40,11 @@ sub intro {
 }
 </code></pre>
 
-<p>在你的代码里就可以这么建立一个Person对象:
-    use Person;</p>
+<p>在你的代码里就可以这么建立一个Person对象:</p>
 
-<pre><code>my $lip = Person-&gt;new(name =&gt; 'lip', age =&gt; 18 );
+<pre><code>use Person;
+
+my $lip = Person-&gt;new(name =&gt; 'lip', age =&gt; 18 );
 $lip-&gt;intro();
 </code></pre>
 
@@ -51,7 +54,7 @@ $lip-&gt;intro();
             </p>
         ]]></content>
         <updated>2014-10-11T00:00:00Z</updated>
-        <category term="ARRAY(0x35dc140)" />
+        <category term="ARRAY(0x41ca140)" />
     </entry>
 </feed>
 
