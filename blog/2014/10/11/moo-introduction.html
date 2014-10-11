@@ -126,6 +126,17 @@ my $lip = Person-&gt;new(name =&gt; 'lip', age =&gt; 18 );
 $lip-&gt;intro();
 </code></pre>
 
+<p>和perl的原生OOP一样，一个package就是一个对象。</p>
+
+<p>Moo提供了一个<code>has</code>关键字，用来定义属性</p>
+
+<pre><code>has name =&gt; is =&gt; 'rw';
+</code></pre>
+
+<p>表示属性<code>name</code> 是 可读可写 的，如果写成'ro'就表示是只读的</p>
+
+<p><code>sub intro</code> 定义了一个方法， <code>$self</code> 是指代实例本身， <code>$self-&gt;name</code> 就可以得到name属性的值</p>
+
             </section>
         </main>
     </div>
