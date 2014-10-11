@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/blog/tag/perl-Moo-oop/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-10-11T11:00:19Z</updated>
+    <updated>2014-10-11T11:00:59Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/tag/perl-Moo-oop.atom"/>
     <link rel="alternate" href="tadegenban.github.io/blog/tag/perl-Moo-oop/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -55,7 +55,7 @@ $lip-&gt;intro();
 <pre><code>has name =&gt; is =&gt; 'rw';
 </code></pre>
 
-<p>表示属性<code>name</code> 是 可读可写 的，如果写成'ro'就表示是只读的</p>
+<p>表示属性<code>name</code> 是 可读可写 的，如果写成<code>'ro'</code>就表示是只读的</p>
 
 <p><code>sub intro</code> 定义了一个方法， <code>$self</code> 是指代实例本身， <code>$self-&gt;name</code> 就可以得到name属性的值</p>
 
@@ -65,7 +65,7 @@ $lip-&gt;intro();
             </p>
         ]]></content>
         <updated>2014-10-11T00:00:00Z</updated>
-        <category term="ARRAY(0x34e9680)" />
+        <category term="ARRAY(0x3a80140)" />
     </entry>
 </feed>
 
