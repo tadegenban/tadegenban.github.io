@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>tadegenban.github.io/index.html</id>
     <title>TADEGENBAN</title>
-    <updated>2014-09-28T15:54:13Z</updated>
+    <updated>2014-10-11T10:13:09Z</updated>
     <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
     <link rel="alternate" href="tadegenban.github.io/index.html"/>
     <generator version="0.022">Statocles</generator>
@@ -207,7 +207,7 @@ say count();
 
 <h1>总结</h1>
 
-<p>因为perl的向下兼容性做的非常好（相比Python），所以perl也抗了很多历史包袱，比如这里提到的不声明直接使用的全局变量。</p>
+<p>因为perl的向下兼容性做的非常好，所以perl也抗了很多历史包袱，比如这里提到的不声明直接使用的全局变量。</p>
 
 <p>现在提倡的用法是变量都用my声明，在需要全局包变量的情况下，用our声明，所有代码前都要加上use strict 和use warnings</p>
 
@@ -219,7 +219,7 @@ say count();
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x404a918)" />
+        <category term="ARRAY(0x4558918)" />
     </entry>
     <entry>
         <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
@@ -247,7 +247,7 @@ say count();
             </p>
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x404b0c8)" />
+        <category term="ARRAY(0x45590c8)" />
     </entry>
 </feed>
 
