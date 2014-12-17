@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <title>TADEGENBAN</title>
+        <style type="text/css">
+            main header h1
+            {
+                border-bottom: 4px solid #045578;
+            }
+            header aside {
+                margin-top: 0;
+                font-size: 12pt;
+            }
+            .sidebar h1 {
+                font-size: 14pt;
+            }
+
+            /** Add a line when using the "Continue reading..." link */
+            section:target {
+                padding-top: 0.5em;
+                border-top: 4px solid #045578;
+            }
+
+            /** Don't allow <pre> to push too much */
+            pre {
+                max-width: 100%;
+                overflow-x: scroll;
+            }
+
+            /** <code> is used for input and output, so let it wrap */
+            code {
+                white-space: normal;
+            }
+
+            .tags {
+                float: right;
+            }
+
+            /**
+             * Don't allow main content images to push things around
+             */
+            main img {
+                max-width: 100%;
+            }
+
+        </style>
+            <link rel="alternate" href="/blog/tag/Pegex.atom" type="application/atom+xml" />
+            <link rel="alternate" href="/blog/tag/Pegex.rss" type="application/rss+xml" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">TADEGENBAN</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="top-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/index.html">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            
+<div class="row">
+
+    <div class="col-md-9">
+        <main>
+            <article>
+                <header>
+                    <h1><a href="/blog/2014/12/17/pegex.html">Pegex 语法解析模块</a></h1>
+                    <p class="tags">Tags:
+                        <a href="/blog/tag/Pegex/index.html" rel="tag">Pegex</a>
+                    </p>
+                    <aside>
+                        <p><time datetime="2014-12-17">
+                            Posted on 2014-12-17
+                        </time>
+                        by tadegenban</p>
+                    </aside>
+                </header>
+                <h1>Pegex</h1>
+
+<p><a href="https://metacpan.org/pod/distribution/Pegex/lib/Pegex.pod">Pegex</a> 是一个语法解析框架，全称是 Parsing Expression Grammars (PEG), with Regular Expessions (Regex) 。 作者是<a href="https://metacpan.org/author/INGY">Ingy dot net</a>, 相信大家都听过他的另外一个模块 <a href="https://metacpan.org/release/Inline">Inline</a>, <a href="https://metacpan.org/release/Inline-C">Inline::C</a>, 最近Ingy的 <a href="http://inline.ouistreet.com/">Inline Module Supprot</a> 项目也是得到了Perl基金会TPF（The Perl Fundation ）的赞助, 相信以后的Inline会更加好用。</p>
+
+<p>最近的China Perl Advent也有介绍一个语法解析模块<a href="https://github.com/PerlChina/mojo-advent/blob/master/articles/2014/16/regexp_grammars.md">Regexp::Grammar</a>. 我没有用过这个模块，但看起来和Pegex的思路大致是一样的，因为其作者是Damian Conway, 所以也是很有保障的。</p>
+
+<p>还是回到Pegex, 就像它的名字一样, Pegex是一个基于正则表达式来做语法解析的框架, 灵感来自于Perl6的Rules. 相比普通的正则表达式, Pegex的语法更加清晰易懂和结构化.比如我们想定义一个语法表示所有以#开头的都是注释：</p>
+
+<pre><code>comment: / HASH ANY* EOL /
+</code></pre>
+
+<p>这里以冒号分割定义了一个 rule 叫 comment， / / 扩起来的其实就是表示正则表达式， 只是用 HASH 来代替 #, 看起来干净一些， 以上的写法和下面的正则表示是一样的</p>
+
+<pre><code>comment: /#.*\r?\n/
+</code></pre>
+
+<p>这里的HASH ANY EOL也是rule，只是事先定义好的默认rule，所以可以看到，Pegex的语法定义其实就是定义一个个子rule，最后把他们串起来。而rule本质上也是正则表达式。</p>
+
+<p>与perl的正则语法不同的是</p>
+
+<p>在正则语句中，用尖括号括起来的是rule</p>
+
+<pre><code>/ ( &lt;rule1&gt; | 'non_rule' ) /
+</code></pre>
+
+<p>如果你想省略尖括号，可以在rule前留一个空白</p>
+
+<pre><code>/ ( rule1 | 'non_rule' ) /
+</code></pre>
+
+<p>正则语句默认是忽略空白的，你可以把一个表达式拆成多行来写，也就是相当于正则 /x模式 默认开启</p>
+
+<pre><code>/ (
+    rule1+   # 注释
+    |
+    rule2
+) /
+</code></pre>
+
+<p>用- + 来表示 \s* 和 \s+</p>
+
+<pre><code>/ - rule3 + /  # rule3 前面可以有0-多个空白， 后面有1到多个空白
+</code></pre>
+
+<p>在perl中任何(?XX ) 形式的语法，在这里都可以把？省略， 也就是下面两个是一样的</p>
+
+<pre><code>/ (: a | b ) /
+
+/ (?: a | b ) /
+</code></pre>
+
+<p>我们再来看一个解析CSV的例子(来自<a href="https://metacpan.org/pod/distribution/Pegex-CSV/lib/Pegex/CSV.pod">Pegex::CSV</a> 模块)</p>
+
+<pre><code>csv: row*
+
+row:
+  /(= ALL)/
+  value* % /- COMMA/
+  /- (: EOL | CR | EOS)/
+
+value: /- ( double | plain) /
+
+double: /- DOUBLE (: (: DOUBLE DOUBLE | [^ DOUBLE] )* ) DOUBLE /
+
+plain: /- (: [^ COMMA DOUBLE CR NL]* [^ SPACE TAB COMMA DOUBLE CR NL ] )? /
+</code></pre>
+
+<p>第一句定义表示csv 是由零到多个row组成</p>
+
+<p>第二句定义表示row 是有逗号分隔的value组成, 这里 % 是Pegex提供的一个操作符，表示用。。分隔的意思，也是来自Perl6的</p>
+
+<p>第三句定义value 是一个double 或者plain</p>
+
+<p>第四句定义double 是一个由双引号扩起来的字符串</p>
+
+<p>第五句定义plain 是一个非逗号，双引号， 换行，空白 等等的 字符串</p>
+
+<p>我们可以看到Pegex的定义本质上也是用的正则. 用DOUBLE, COMMA, EOL 这样的直白的名字来代替'",\r?\n', 用定义rule来将整个语法拆分成每个部分，在写比较复杂的正则表达式时会非常清晰，相信大家都有看一个非常复杂的正则时的头痛。</p>
+
+<p>语法定义好了，我还需要定义一个接受器(Receiver), Pegex提供一个基类Pegex::Tree,供你在此基础上定义你的接收器。</p>
+
+<p>下面是一个CSV的接收器，将解析过的csv转化为一个二维数组的形式（List of List）。</p>
+
+<pre><code>package Pegex::CSV::LoL;
+use Pegex::Base;
+extends 'Pegex::Tree';
+
+sub got_row {
+    my ($self, $got) = @_;
+    $self-&gt;flatten($got);
+}
+
+sub got_value {
+    $_[1] =~ s/(?:^"|"$)//g;
+    $_[1] =~ s/""/"/g;
+    return $_[1];
+}
+</code></pre>
+
+<p>got_* 方法用来定义当Parser捕获了一个相应的rule后进行的操作, *对应之前在语法定义时的rule名字。</p>
+
+<p>比如这里got_value 就是把得到的value的双引号去掉， flatten是将一个多维数组展平成一个一维数组。</p>
+
+<p>Grammar和Receiver都定义好之后，整个工作就算完成了，可以用定义好的语法和接受器来读csv文件了。</p>
+
+<pre><code>my $parser = Pegex::Parser-&gt;new(
+    grammar =&gt; Pegex::CSV::Grammar-&gt;new,
+    receiver =&gt; Pegex::CSV::LoL-&gt;new,
+);
+
+$parser-&gt;parse($csv);
+</code></pre>
+
+<p>我现在用到Pegex地方主要是解析一些各种各样格式的数据, 以及为配置文件定义自己的语法DSL。相比之前用正则和循环来写， 一个是工作量降低， 基本是语法定义好就可以用了的节奏， Pegex为你做了语法解析的事情， 剩下的只是写Receiver得到想要的数据类型。 另一个是代码干净了许多， 后面维护起来很方便。</p>
+
+            </article>
+        </main>
+        <ul class="pager">
+            <li class="previous disabled">
+                <span>&larr; Older</span>
+            </li>
+            <li class="next disabled">
+                <span>Newer &rarr;</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sidebar col-md-3">
+        
+        <h1>Tags</h1>
+        <ul class="list-inline">
+            <li><a href="/blog/tag/Pegex/index.html">Pegex</a></li>
+            <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
+            <li><a href="/blog/tag/perl/index.html">perl</a></li>
+            <li><a href="/blog/tag/perl-Moo-oop/index.html">perl Moo oop</a></li>
+        </ul>
+        <h1>Feeds</h1>
+        <ul class="list-inline">
+            <li>
+                <a href="/blog/tag/Pegex.atom" rel="alternate" type="application/atom+xml">
+                    Atom
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tag/Pegex.rss" rel="alternate" type="application/rss+xml">
+                    RSS
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+        </div>
+        
+    </body>
+</html>
