@@ -53,7 +53,7 @@
 
                 <p>这是我在知乎上的答题。</p>
 
-<h1>// 操作符</h1>
+<h2>// 操作符</h2>
 
 <pre><code>$a = $b // $c;
 # $a = $b, 如果$b 为undef, $a = $c
@@ -64,7 +64,7 @@
 <pre><code>$some_var //= 0;
 </code></pre>
 
-<h1>... yada yada</h1>
+<h2>... yada yada</h2>
 
 <p>当我们定义一个函数而打算在未来实现它</p>
 
@@ -76,7 +76,7 @@
 <p>三个dot 这个操作符表示这里还有待实现，程序运行不会报错，但如果使用到这个未定义的函数，则会抛出'unimplement'的异常
 这个操作符有个名字 yada yada 是来自日语的词汇，释义为等等，之类的意思</p>
 
-<h1>-> 和 autobox</h1>
+<h2>-> 和 autobox</h2>
 
 <p>-> 操作符有个比较有意思的一个地方，除了我们常用的</p>
 
@@ -93,7 +93,7 @@ $obj-&gt;method()
 
 <p>如果想要没有$的autobox， "hello"->len(),可以看看CPAN 上的autobox::Core</p>
 
-<h1>s///r</h1>
+<h2>s///r</h2>
 
 <p>是否遇到希望用s///来得到想要的字符串而不希望改变原来的变量？</p>
 
@@ -102,7 +102,7 @@ $y = $x =~ s/dogs/cats/r;
 print "$x $y\n"; # prints "I like dogs. I like cats."
 </code></pre>
 
-<h1>here doc 和 inline file</h1>
+<h2>here doc 和 inline file</h2>
 
 <p>here doc 可以像下面这样定义一个长的字符串</p>
 
@@ -122,7 +122,7 @@ a b c d
 1 2 3 4
 </code></pre>
 
-<h1>flip-flop</h1>
+<h2>flip-flop</h2>
 
 <p>.. 除了在列表上下文作为范围操作符使用</p>
 
@@ -137,9 +137,7 @@ a b c d
   ...
 }</p>
 
-<ul>
-<li>autovivification</li>
-</ul>
+<h2>autovivification</h2>
 
 <p>这个应该是perl所特有的一种用法
 使得我可以不必依次定义一个数据的每一级类型，而直接对其进行任意深度的赋值</p>
@@ -164,14 +162,14 @@ if ( exists $hash-&gt;{a} ) {
 
 <p>我们可以使用<code>no autovivification</code> 来关闭这一特性</p>
 
-<h1>quote word list: qw</h1>
+<h2>quote word list: qw</h2>
 
 <p>这个非常常用，在写一个字符串数组的时候,不用麻烦的大引号了逗号了</p>
 
 <pre><code>qw( item1 item2 item3 )  =&gt; ('item1', 'item2', 'item3')
 </code></pre>
 
-<h1>x</h1>
+<h2>x</h2>
 
 <pre><code>'a' x 4 # 'aaaa'
 </code></pre>
@@ -181,7 +179,7 @@ if ( exists $hash-&gt;{a} ) {
 <pre><code>(1,2,3) x 3 # (1,2,3,1,2,3,1,2,3)
 </code></pre>
 
-<h1>label</h1>
+<h2>label</h2>
 
 <p>可以在任意位置定义标签，通过goto 进行跳转。
 当然很多人都不推荐在程序大量使用goto, 但是perl中定义标签还有一个非常有用的功能，就是循环中使用next 或 last + 标签来进行跨层使用。</p>
@@ -196,7 +194,7 @@ for ( @list_A) {
 }
 </code></pre>
 
-<h1>@{[...]}</h1>
+<h2>@{[...]}</h2>
 
 <p>由于perl的sigil的存在，使得perl在print 的时候很容易内插变量，比如在c 中</p>
 
@@ -215,7 +213,7 @@ my $y = 2;
 print "$x + $y = @{[ $x + $y ]}"
 </code></pre>
 
-<h1>($x, $y) = ($y, $x );</h1>
+<h2>($x, $y) = ($y, $x );</h2>
 
 <p>python 中的 a, b = b, a</p>
 
@@ -414,7 +412,7 @@ sub f {
 
 <p>可能有些时候你需要对内建的全局变量比如 $/, $_ 临时赋值，这时候会用到local。</p>
 
-<h1>state -- 词法变量,静态变量</h1>
+<h2>state -- 词法变量,静态变量</h2>
 
 <pre><code>state $foo = 1;
 </code></pre>
@@ -433,7 +431,7 @@ say count();
 say count();
 </code></pre>
 
-<h1>总结</h1>
+<h2>总结</h2>
 
 <p>因为perl的向下兼容性做的非常好，所以perl也抗了很多历史包袱，比如这里提到的不声明直接使用的全局变量。</p>
 
