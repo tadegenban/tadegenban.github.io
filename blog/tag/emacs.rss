@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>TADEGENBAN</title>
-        <link>tadegenban.github.io/blog/tag/emacs/index.html</link>
-        <atom:link href="tadegenban.github.io/blog/tag/emacs.rss" rel="self" type="application/rss+xml" />
+        <link>/blog/tag/emacs</link>
+        <atom:link href="/blog/tag/emacs.rss" rel="self" type="application/rss+xml" />
         <description>Blog feed of TADEGENBAN</description>
-        <generator>Statocles 0.022</generator>
+        <generator>Statocles 0.042</generator>
         <item>
             <title>Emacs 自动分割窗口</title>
-            <link>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</link>
-            <guid>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</guid>
+            <link>/blog/2014/06/19/emacs-auto-split-windows.html</link>
+            <guid>/blog/2014/06/19/emacs-auto-split-windows.html</guid>
             <description><![CDATA[
                 <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
@@ -25,13 +25,13 @@
 
 <p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
 
-                    <p><a href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
+                    <p><a href="/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
                 <p>Tags:
-                    <a href="/blog/tag/emacs/index.html">emacs</a>
+                    <a href="/blog/tag/emacs">emacs</a>
                 </p>
             ]]></description>
             <pubDate>
-                四, 19  6月 2014 00:00:00 +0800
+                Thu, 19 Jun 2014 00:00:00 +0000
             </pubDate>
         </item>
     </channel>

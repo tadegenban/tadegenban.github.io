@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>tadegenban.github.io/blog/tag/perl/index.html</id>
+    <id>/blog/tag/perl</id>
     <title>TADEGENBAN</title>
-    <updated>2015-01-19T23:40:40Z</updated>
-    <link rel="self" href="tadegenban.github.io/blog/tag/perl.atom"/>
-    <link rel="alternate" href="tadegenban.github.io/blog/tag/perl/index.html"/>
-    <generator version="0.022">Statocles</generator>
+    <updated>2015-03-23T00:07:16Z</updated>
+    <link rel="self" href="/blog/tag/perl.atom"/>
+    <link rel="alternate" href="/blog/tag/perl"/>
+    <generator version="0.042">Statocles</generator>
     <entry>
-        <id>tadegenban.github.io/blog/2015/01/19/perl-tricks.html</id>
+        <id>/blog/2015/01/19/perl-tricks.html</id>
         <title>perl tricks</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2015/01/19/perl-tricks.html" />
+        <link rel="alternate" href="/blog/2015/01/19/perl-tricks.html" />
         <content type="html"><![CDATA[
-            <p>这是在知乎上的答题</p>
+            <p>这是我在知乎上的答题。</p>
 
 <h1>// 操作符</h1>
 
@@ -180,19 +180,19 @@ print "$x + $y = @{[ $x + $y ]}"
 
 <p>python 中的 a, b = b, a</p>
 
-                <p><a href="tadegenban.github.io/blog/2015/01/19/perl-tricks.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2015/01/19/perl-tricks.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/perl/index.html">perl</a>
+                <a href="/blog/tag/perl">perl</a>
             </p>
         ]]></content>
         <updated>2015-01-19T00:00:00Z</updated>
-        <category term="ARRAY(0x322edb0)" />
+        <category term="perl" />
     </entry>
     <entry>
-        <id>tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</id>
+        <id>/blog/2014/09/23/my-our-local-state.html</id>
         <title>perl 变量 my our local state</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2014/09/23/my-our-local-state.html" />
+        <link rel="alternate" href="/blog/2014/09/23/my-our-local-state.html" />
         <content type="html"><![CDATA[
             <h2>perl 变量类型与作用域</h2>
 
@@ -395,13 +395,13 @@ say count();
 
 <p>这两个pragma, 在某些特定的时候会需要local 和 static 。</p>
 
-                <p><a href="tadegenban.github.io/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/perl/index.html">perl</a>
+                <a href="/blog/tag/perl">perl</a>
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x32fa700)" />
+        <category term="perl" />
     </entry>
 </feed>
 

@@ -1,75 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/theme/css/normalize.css" />
+        <link rel="stylesheet" href="/theme/css/skeleton.css" />
+        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
         <title>TADEGENBAN</title>
-        <style type="text/css">
-            main header h1
-            {
-                border-bottom: 4px solid #045578;
-            }
-            header aside {
-                margin-top: 0;
-                font-size: 12pt;
-            }
-            .sidebar h1 {
-                font-size: 14pt;
-            }
-
-            /** Add a line when using the "Continue reading..." link */
-            section:target {
-                padding-top: 0.5em;
-                border-top: 4px solid #045578;
-            }
-
-            /** Don't allow <pre> to push too much */
-            pre {
-                max-width: 100%;
-                overflow-x: scroll;
-            }
-
-            /** <code> is used for input and output, so let it wrap */
-            code {
-                white-space: normal;
-            }
-
-            .tags {
-                float: right;
-            }
-
-            /**
-             * Don't allow main content images to push things around
-             */
-            main img {
-                max-width: 100%;
-            }
-
-        </style>
-            <link rel="alternate" href="/blog/tag/perl.atom" type="application/atom+xml" />
-            <link rel="alternate" href="/blog/tag/perl.rss" type="application/rss+xml" />
+        <link rel="alternate" href="/blog/tag/perl.atom" type="application/atom+xml" />
+        <link rel="alternate" href="/blog/tag/perl.rss" type="application/rss+xml" />
+        
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <nav class="navbar">
                 <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="/">TADEGENBAN</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="top-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li><a href="/index.html">Blog</a></li>
-                        </ul>
-                    </div>
+                    <a class="brand" href="/">TADEGENBAN</a>
+                    <ul>
+                        <li>
+                            <a href="/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">About</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
             
@@ -78,22 +30,28 @@
             
 <div class="row">
 
-    <div class="col-md-9">
+    <div class="nine columns">
         <main>
+
             <article>
                 <header>
                     <h1><a href="/blog/2015/01/19/perl-tricks.html">perl tricks</a></h1>
+
                     <p class="tags">Tags:
-                        <a href="/blog/tag/perl/index.html" rel="tag">perl</a>
+                        <a href="/blog/tag/perl" rel="tag">perl</a>
                     </p>
+
                     <aside>
                         <p><time datetime="2015-01-19">
                             Posted on 2015-01-19
                         </time>
-                        by tadegenban</p>
+                            by tadegenban
+                        </p>
                     </aside>
+
                 </header>
-                <p>这是在知乎上的答题</p>
+
+                <p>这是我在知乎上的答题。</p>
 
 <h1>// 操作符</h1>
 
@@ -261,20 +219,27 @@ print "$x + $y = @{[ $x + $y ]}"
 
 <p>python 中的 a, b = b, a</p>
 
+
+
             </article>
             <article>
                 <header>
                     <h1><a href="/blog/2014/09/23/my-our-local-state.html">perl 变量 my our local state</a></h1>
+
                     <p class="tags">Tags:
-                        <a href="/blog/tag/perl/index.html" rel="tag">perl</a>
+                        <a href="/blog/tag/perl" rel="tag">perl</a>
                     </p>
+
                     <aside>
                         <p><time datetime="2014-09-23">
                             Posted on 2014-09-23
                         </time>
-                        by tadegenban</p>
+                            by tadegenban
+                        </p>
                     </aside>
+
                 </header>
+
                 <h2>perl 变量类型与作用域</h2>
 
 <p>根据作用域的不同来区分，perl有两种变量类型：</p>
@@ -476,26 +441,38 @@ say count();
 
 <p>这两个pragma, 在某些特定的时候会需要local 和 static 。</p>
 
+
+
             </article>
         </main>
+
         <ul class="pager">
-            <li class="previous disabled">
-                <span>&larr; Older</span>
+            <li class="prev">
+                <a class="button disabled"
+                    rel="next" href=""
+                >
+                    &larr; Older
+                </a>
             </li>
-            <li class="next disabled">
-                <span>Newer &rarr;</span>
+            <li class="next">
+                <a class="button disabled"
+                    rel="prev" href=""
+                >
+                    Newer &rarr;
+                </a>
             </li>
         </ul>
+
     </div>
 
-    <div class="sidebar col-md-3">
+    <div class="three columns sidebar">
         
         <h1>Tags</h1>
         <ul class="list-inline">
-            <li><a href="/blog/tag/Pegex/index.html">Pegex</a></li>
-            <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
-            <li><a href="/blog/tag/perl/index.html">perl</a></li>
-            <li><a href="/blog/tag/perl-Moo-oop/index.html">perl Moo oop</a></li>
+            <li><a href="/blog/tag/Pegex">Pegex</a></li>
+            <li><a href="/blog/tag/emacs">emacs</a></li>
+            <li><a href="/blog/tag/perl">perl</a></li>
+            <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
         </ul>
         <h1>Feeds</h1>
         <ul class="list-inline">
@@ -515,6 +492,12 @@ say count();
 </div>
 
         </div>
-        
+        <footer>
+            
+            <div class="container tagline">
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://www.perl.org">Powered by Perl</a>
+            </div>
+        </footer>
     </body>
 </html>

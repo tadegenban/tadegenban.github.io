@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>tadegenban.github.io/index.html</id>
+    <id>/</id>
     <title>TADEGENBAN</title>
-    <updated>2015-01-19T23:40:39Z</updated>
-    <link rel="self" href="tadegenban.github.io/blog/index.atom"/>
-    <link rel="alternate" href="tadegenban.github.io/index.html"/>
-    <generator version="0.022">Statocles</generator>
+    <updated>2015-03-23T00:07:16Z</updated>
+    <link rel="self" href="/blog/index.atom"/>
+    <link rel="alternate" href="/"/>
+    <generator version="0.042">Statocles</generator>
     <entry>
-        <id>tadegenban.github.io/blog/2015/01/19/perl-tricks.html</id>
+        <id>/blog/2015/01/19/perl-tricks.html</id>
         <title>perl tricks</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2015/01/19/perl-tricks.html" />
+        <link rel="alternate" href="/blog/2015/01/19/perl-tricks.html" />
         <content type="html"><![CDATA[
-            <p>这是在知乎上的答题</p>
+            <p>这是我在知乎上的答题。</p>
 
 <h1>// 操作符</h1>
 
@@ -180,19 +180,19 @@ print "$x + $y = @{[ $x + $y ]}"
 
 <p>python 中的 a, b = b, a</p>
 
-                <p><a href="tadegenban.github.io/blog/2015/01/19/perl-tricks.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2015/01/19/perl-tricks.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/perl/index.html">perl</a>
+                <a href="/blog/tag/perl">perl</a>
             </p>
         ]]></content>
         <updated>2015-01-19T00:00:00Z</updated>
-        <category term="ARRAY(0x322edb0)" />
+        <category term="perl" />
     </entry>
     <entry>
-        <id>tadegenban.github.io/blog/2014/12/17/pegex.html</id>
+        <id>/blog/2014/12/17/pegex.html</id>
         <title>Pegex 语法解析模块</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2014/12/17/pegex.html" />
+        <link rel="alternate" href="/blog/2014/12/17/pegex.html" />
         <content type="html"><![CDATA[
             <h1>Pegex</h1>
 
@@ -309,23 +309,23 @@ $parser-&gt;parse($csv);
 
 <p>我现在用到Pegex地方主要是解析一些各种各样格式的数据, 以及为配置文件定义自己的语法DSL。相比之前用正则和循环来写， 一个是工作量降低， 基本是语法定义好就可以用了的节奏， Pegex为你做了语法解析的事情， 剩下的只是写Receiver得到想要的数据类型。 另一个是代码干净了许多， 后面维护起来很方便。</p>
 
-                <p><a href="tadegenban.github.io/blog/2014/12/17/pegex.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2014/12/17/pegex.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/Pegex/index.html">Pegex</a>
+                <a href="/blog/tag/Pegex">Pegex</a>
             </p>
         ]]></content>
         <updated>2014-12-17T00:00:00Z</updated>
-        <category term="ARRAY(0x32a3340)" />
+        <category term="Pegex" />
     </entry>
     <entry>
-        <id>tadegenban.github.io/blog/2014/10/11/moo-introduction.html</id>
+        <id>/blog/2014/10/11/moo-introduction.html</id>
         <title>用Moo来写面向对象perl</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2014/10/11/moo-introduction.html" />
+        <link rel="alternate" href="/blog/2014/10/11/moo-introduction.html" />
         <content type="html"><![CDATA[
             <h2>Moose 大家庭</h2>
 
-<p>perl的原生的面向对象是比较简单的，通过bless关键字和hash来建立对象，很灵活但也很简陋。</p>
+<p>perl的原生的面向对象是比较简单的，通过bless关键字和hash来建立对象，很灵活但也很简陋</p>
 
 <p>自从出现了Moose之后，perl的面向对象就很富有表现力了。</p>
 
@@ -415,19 +415,19 @@ $lip-&gt;intro();
 
 <h2>方法修改器 -- before after around</h2>
 
-                <p><a href="tadegenban.github.io/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/perl-Moo-oop/index.html">perl Moo oop</a>
+                <a href="/blog/tag/perl-Moo-oop">perl Moo oop</a>
             </p>
         ]]></content>
         <updated>2014-10-11T00:00:00Z</updated>
-        <category term="ARRAY(0x3227e28)" />
+        <category term="perl Moo oop" />
     </entry>
     <entry>
-        <id>tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</id>
+        <id>/blog/2014/09/23/my-our-local-state.html</id>
         <title>perl 变量 my our local state</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2014/09/23/my-our-local-state.html" />
+        <link rel="alternate" href="/blog/2014/09/23/my-our-local-state.html" />
         <content type="html"><![CDATA[
             <h2>perl 变量类型与作用域</h2>
 
@@ -630,19 +630,19 @@ say count();
 
 <p>这两个pragma, 在某些特定的时候会需要local 和 static 。</p>
 
-                <p><a href="tadegenban.github.io/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/perl/index.html">perl</a>
+                <a href="/blog/tag/perl">perl</a>
             </p>
         ]]></content>
         <updated>2014-09-23T00:00:00Z</updated>
-        <category term="ARRAY(0x32fa700)" />
+        <category term="perl" />
     </entry>
     <entry>
-        <id>tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
+        <id>/blog/2014/06/19/emacs-auto-split-windows.html</id>
         <title>Emacs 自动分割窗口</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html" />
+        <link rel="alternate" href="/blog/2014/06/19/emacs-auto-split-windows.html" />
         <content type="html"><![CDATA[
             <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
@@ -658,13 +658,13 @@ say count();
 
 <p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
 
-                <p><a href="tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/emacs/index.html">emacs</a>
+                <a href="/blog/tag/emacs">emacs</a>
             </p>
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>
-        <category term="ARRAY(0x32a3538)" />
+        <category term="emacs" />
     </entry>
 </feed>
 

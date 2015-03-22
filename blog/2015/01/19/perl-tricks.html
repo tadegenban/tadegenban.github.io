@@ -1,73 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/theme/css/normalize.css" />
+        <link rel="stylesheet" href="/theme/css/skeleton.css" />
+        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
         <title>TADEGENBAN</title>
-        <style type="text/css">
-            main header h1
-            {
-                border-bottom: 4px solid #045578;
-            }
-            header aside {
-                margin-top: 0;
-                font-size: 12pt;
-            }
-            .sidebar h1 {
-                font-size: 14pt;
-            }
-
-            /** Add a line when using the "Continue reading..." link */
-            section:target {
-                padding-top: 0.5em;
-                border-top: 4px solid #045578;
-            }
-
-            /** Don't allow <pre> to push too much */
-            pre {
-                max-width: 100%;
-                overflow-x: scroll;
-            }
-
-            /** <code> is used for input and output, so let it wrap */
-            code {
-                white-space: normal;
-            }
-
-            .tags {
-                float: right;
-            }
-
-            /**
-             * Don't allow main content images to push things around
-             */
-            main img {
-                max-width: 100%;
-            }
-
-        </style>
+        
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <nav class="navbar">
                 <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="/">TADEGENBAN</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="top-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li><a href="/index.html">Blog</a></li>
-                        </ul>
-                    </div>
+                    <a class="brand" href="/">TADEGENBAN</a>
+                    <ul>
+                        <li>
+                            <a href="/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">About</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
             
@@ -75,22 +27,23 @@
         <div class="main container">
             <div class="row">
 
-    <div class="col-md-9">
+    <div class="nine columns">
         <main>
             <header>
                 <h1>perl tricks</h1>
                 <p class="tags">Tags:
-                    <a href="/blog/tag/perl/index.html" rel="tag">perl</a>
+                    <a href="/blog/tag/perl" rel="tag">perl</a>
                 </p>
                 <aside>
                     <p><time datetime="2015-01-19">
                         Posted on 2015-01-19
                     </time>
-                    by tadegenban</p>
+                        by tadegenban
+                    </p>
                 </aside>
             </header>
             <section id="section-1">
-                <p>这是在知乎上的答题</p>
+                <p>这是我在知乎上的答题。</p>
 
 <h1>// 操作符</h1>
 
@@ -262,15 +215,15 @@ print "$x + $y = @{[ $x + $y ]}"
         </main>
     </div>
 
-    <div class="col-md-3">
+    <div class="three columns sidebar">
         
         <nav id="tags">
             <h1>Tags</h1>
             <ul class="list-inline">
-                <li><a href="/blog/tag/Pegex/index.html">Pegex</a></li>
-                <li><a href="/blog/tag/emacs/index.html">emacs</a></li>
-                <li><a href="/blog/tag/perl/index.html">perl</a></li>
-                <li><a href="/blog/tag/perl-Moo-oop/index.html">perl Moo oop</a></li>
+                <li><a href="/blog/tag/Pegex">Pegex</a></li>
+                <li><a href="/blog/tag/emacs">emacs</a></li>
+                <li><a href="/blog/tag/perl">perl</a></li>
+                <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
             </ul>
         </nav>
     </div>
@@ -278,6 +231,12 @@ print "$x + $y = @{[ $x + $y ]}"
 </div>
 
         </div>
-        
+        <footer>
+            
+            <div class="container tagline">
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://www.perl.org">Powered by Perl</a>
+            </div>
+        </footer>
     </body>
 </html>

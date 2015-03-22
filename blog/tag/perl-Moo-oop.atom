@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>tadegenban.github.io/blog/tag/perl-Moo-oop/index.html</id>
+    <id>/blog/tag/perl-Moo-oop</id>
     <title>TADEGENBAN</title>
-    <updated>2015-01-19T23:40:40Z</updated>
-    <link rel="self" href="tadegenban.github.io/blog/tag/perl-Moo-oop.atom"/>
-    <link rel="alternate" href="tadegenban.github.io/blog/tag/perl-Moo-oop/index.html"/>
-    <generator version="0.022">Statocles</generator>
+    <updated>2015-03-23T00:07:16Z</updated>
+    <link rel="self" href="/blog/tag/perl-Moo-oop.atom"/>
+    <link rel="alternate" href="/blog/tag/perl-Moo-oop"/>
+    <generator version="0.042">Statocles</generator>
     <entry>
-        <id>tadegenban.github.io/blog/2014/10/11/moo-introduction.html</id>
+        <id>/blog/2014/10/11/moo-introduction.html</id>
         <title>用Moo来写面向对象perl</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="tadegenban.github.io/blog/2014/10/11/moo-introduction.html" />
+        <link rel="alternate" href="/blog/2014/10/11/moo-introduction.html" />
         <content type="html"><![CDATA[
             <h2>Moose 大家庭</h2>
 
-<p>perl的原生的面向对象是比较简单的，通过bless关键字和hash来建立对象，很灵活但也很简陋。</p>
+<p>perl的原生的面向对象是比较简单的，通过bless关键字和hash来建立对象，很灵活但也很简陋</p>
 
 <p>自从出现了Moose之后，perl的面向对象就很富有表现力了。</p>
 
@@ -104,13 +104,13 @@ $lip-&gt;intro();
 
 <h2>方法修改器 -- before after around</h2>
 
-                <p><a href="tadegenban.github.io/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
+                <p><a href="/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/perl-Moo-oop/index.html">perl Moo oop</a>
+                <a href="/blog/tag/perl-Moo-oop">perl Moo oop</a>
             </p>
         ]]></content>
         <updated>2014-10-11T00:00:00Z</updated>
-        <category term="ARRAY(0x3227e28)" />
+        <category term="perl Moo oop" />
     </entry>
 </feed>
 
