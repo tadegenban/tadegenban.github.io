@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/theme/css/normalize.css" />
+        <link rel="stylesheet" href="/theme/css/skeleton.css" />
+        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <title>TADEGENBAN</title>
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">TADEGENBAN</a>
+                    <ul>
+                        <li>
+                            <a href="/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            <h2>Moo introduction</h2>
+
+<h3>Perl 轻量级面向对象</h3>
+
+<p><br/>
+<br/>
+<br/>
+tadegenban@gmail.com</p>
+
+<hr />
+
+<!-- .slide: class="Moo" font-size="50" --> 
+<br/>
+
+
+
+1dcf41457652c645030c9939c54342b0
+
+
+
+
+
+b19eb87e753bdbff43365558c4ee5f70
+
+
+
+
+
+
+d1a1dcbfd3739a94751d730c05043a2b
+
+
+
+
+
+4c7c95c35b14ec9ef3178b7bb3c811e1
+
+
+
+
+b19eb87e753bdbff43365558c4ee5f70
+
+
+
+
+
+9f288cff42b9fcab3be58a3e878ab1d6
+
+
+
+
+
+c1c3fa76df5739d341aaf3c31f51c6b3
+
+
+
+
+
+b19eb87e753bdbff43365558c4ee5f70
+
+
+
+
+
+
+efe4f1f48eaf47f7f2f4acab795655fb
+
+
+
+
+
+18cb268bb272b2b2d5a7575e48cb8895
+
+
+
+
+
+20d7d4d607adec36f9487ca440a2658e
+
+
+
+
+
+186bffff3317ae8e58d45640ba69e74d
+
+
+
+
+
+5d36bc95de813ffafb1f10e019fea1aa
+
+
+
+
+
+6ef67b48cbf401a7860d299919d9a9ae
+
+
+
+
+
+
+b19eb87e753bdbff43365558c4ee5f70
+
+
+
+
+
+
+1ff3f8802e30d225a8e2c82050db1f2a
+
+
+
+The One , The Only, The Original, The Awesome  <!-- .element: class="fragment" data-fragment-index="1" --> 
+
+<h2>Moo  <!-- .element: class="fragment" data-fragment-index="3" --></h2>
+
+<p>provides almost -- but not quite -- two thirds of Moose  <!-- .element: class="fragment" data-fragment-index="4" --> </p>
+
+<h2>Mo <!-- .element: class="fragment" data-fragment-index="5" --></h2>
+
+<p>Mo is less. Much less.   <!-- .element: class="fragment" data-fragment-index="6" --> </p>
+
+<h2>M <!-- .element: class="fragment" data-fragment-index="8" --></h2>
+
+<p>M does absolutely nothing  <!-- .element: class="fragment" data-fragment-index="9" --> </p>
+
+<hr />
+
+<h2>Old School Perl OO</h2>
+
+<pre><code>package Dog;
+
+sub new {
+    my $pkg = shift;
+    my %opt = @_;
+    my $self = \%opt;
+
+    bless $self, $pkg;
+}
+
+sub my_method { ... }
+
+Dog-&gt;new( name =&gt; 'jojo', age =&gt; 10 );
+</code></pre>
+
+<hr />
+
+<h2>why Moo</h2>
+
+<ul>
+<li>bless is simple <!-- .element: class="fragment" data-fragment-index="1" --> 
+<ul>
+<li>but not handy <!-- .element: class="fragment" data-fragment-index="2" --> </li>
+</ul></li>
+<li>Moose is Great <!-- .element: class="fragment" data-fragment-index="3" --> 
+<ul>
+<li>but XS dependenies <!-- .element: class="fragment" data-fragment-index="4" --> </li>
+<li>slow start time <!-- .element: class="fragment" data-fragment-index="5" --> </li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2>Moo features</h2>
+
+<ul>
+<li>Moo is pure Perl ( no XS )  <!-- .element: class="fragment" data-fragment-index="1" --> </li>
+<li>Moo has a fast start time <!-- .element: class="fragment" data-fragment-index="2" --> 
+<ul>
+<li>(Mo is more fast than Moo) <!-- .element: class="fragment" data-fragment-index="3" --> </li>
+</ul></li>
+<li>compatible with Moose <!-- .element: class="fragment" data-fragment-index="4" --> </li>
+</ul>
+
+<hr />
+
+<h2>Attribute</h2>
+
+<hr />
+
+<h2>has</h2>
+
+<pre><code>package Dog;
+
+has name =&gt; is =&gt; 'rw';
+has birthday =&gt; is =&gt; 'ro';
+
+my $dog = Dog-&gt;new( name =&gt; 'jojo',
+                    birthday =&gt; '2014.11.11');
+$dog-&gt;name('coco'); # ok
+$dog-&gt;birthday('2014.2.14'); # fail
+</code></pre>
+
+<hr />
+
+<h2>default and builder</h2>
+
+<pre><code> package Dog;
+
+ has master =&gt; is =&gt; 'rw', default =&gt; sub { Master-&gt;new() };
+ has home   =&gt; is =&gt; 'rw', default =&gt; sub { $_[0]-&gt;master-&gt;home };
+</code></pre>
+
+<p><br/></p>
+
+<pre><code> has master =&gt; is =&gt; 'rw', default =&gt; sub { Master-&gt;new() };
+ has home   =&gt; is =&gt; 'rw', builder =&gt; 1;
+
+ sub _build_home { $_[0]-&gt;master-&gt;home }
+</code></pre>
+
+<p>Note:Because Attribute initialization order is unpredictable . This maybe fail</p>
+
+<hr />
+
+<h2>lazy</h2>
+
+<pre><code> has master =&gt; is =&gt; 'rw', default =&gt; sub { Master-&gt;new() };
+ has home   =&gt; is =&gt; 'rw', lazy =&gt; 1, builder =&gt; 1;  # lazy means create when needed
+
+ sub _build_home { $_[0]-&gt;master-&gt;home }
+</code></pre>
+
+<hr />
+
+<h2>trigger</h2>
+
+<pre><code>package Dog;
+
+has name =&gt; is =&gt; 'rw', trigger =&gt; 1;
+has name =&gt; is =&gt; 'rw', trigger =&gt; sub { ... };
+
+sub _trigger_name { say 'I have a name -- ' . $_[0]-&gt;name }
+</code></pre>
+
+<p><br/></p>
+
+<pre><code>my $dog = Dog-&gt;new(name =&gt; 'coco'); # print: I have a name -- coco 
+</code></pre>
+
+<hr />
+
+<h2>handles</h2>
+
+<pre><code> package Config;
+ use Moo;
+ use JSON::XS ();
+
+ has _json =&gt; (
+   is      =&gt; 'ro', 
+   handles =&gt; [qw/decode encode/],
+   default =&gt; sxub { JSON::XS-&gt;new },
+ );
+</code></pre>
+
+<hr />
+
+<h2>Method</h2>
+
+<pre><code>sub greeting {
+    my $self = shift;
+
+    ...
+}
+</code></pre>
+
+<hr />
+
+<h2>extends</h2>
+
+<pre><code>package Dog;
+use Moo;
+extends 'Animal';
+</code></pre>
+
+<hr />
+
+<h2>Method modifier</h2>
+
+<hr />
+
+<h2>before</h2>
+
+<pre><code>package Dog;
+extends 'Animal';
+
+before eat =&gt; sub {
+    my ( $self, $food ) = @_;
+
+    die if $food eq 'grass';
+
+};
+</code></pre>
+
+<ul>
+<li>before is called before the method it is modifying <!-- .element: class="fragment" data-fragment-index="1" --> </li>
+<li>Receives same params as the original method <!-- .element: class="fragment" data-fragment-index="2" --> </li>
+</ul>
+
+<hr />
+
+<h2>after</h2>
+
+<pre><code>package Dog;
+extends 'Animal';
+
+after eat =&gt; sub {
+    my ( $self, $food ) = @_;
+
+    $self-&gt;log("has eat $food");
+
+};
+</code></pre>
+
+<ul>
+<li>after is called after the method it is modifying <!-- .element: class="fragment" data-fragment-index="1" --> </li>
+<li>Receives same params as the original method <!-- .element: class="fragment" data-fragment-index="2" --> </li>
+</ul>
+
+<hr />
+
+<h2>around</h2>
+
+<pre><code> package Dog;
+ extends 'Animal';
+
+ around eat =&gt; sub {
+     my ( $orig, $self, $food ) = @_;
+
+     my $ret = $orig-&gt;($self, $food);
+     do_something($ret);
+
+ };
+</code></pre>
+
+<ul>
+<li><p>around is called instead of the method it is modifying <!-- .element: class="fragment" data-fragment-index="1" --> </p></li>
+<li><p>The method you're overriding is passed in as the first argument  <!-- .element: class="fragment" data-fragment-index="2" --> </p></li>
+</ul>
+
+<hr />
+
+<h2>Types</h2>
+
+<hr />
+
+<h2>build your own sub</h2>
+
+<pre><code>use Scalar::Util qw/looks_like_number/;
+
+has age =&gt; (
+    is  =&gt; 'rw',
+    isa =&gt; sub { die unless looks_like_number($_[0]) },
+);
+</code></pre>
+
+<hr />
+
+<h2>MooX::Types::MooseLike</h2>
+
+<pre><code>use MooX::Types::MooseLike::Base qw/:all/;
+
+has age =&gt; (is =&gt; 'ro', isa =&gt; Int);
+
+has beers_by_day_of_week =&gt; isa =&gt; HashRef;
+
+has current_BAC =&gt; isa =&gt; Num;
+
+has dog_list =&gt; isa =&gt; ArrayRef[InstanceOf['Dog']];
+</code></pre>
+
+<hr />
+
+<h2>Role</h2>
+
+<ul>
+<li><p>Role is like mixin in Ruby or Java interface <!-- .element: class="fragment" data-fragment-index="1" --> </p></li>
+<li><p>Role can have attributes and methodes <!-- .element: class="fragment" data-fragment-index="2" --> </p></li>
+<li><p>Role can do other roles <!-- .element: class="fragment" data-fragment-index="3" --> </p></li>
+<li><p>Role add behavior or state to a class <!-- .element: class="fragment" data-fragment-index="4" --> </p></li>
+</ul>
+
+<hr />
+
+<h2>Role example</h2>
+
+<pre><code>package CanSpeak;
+use Moo::Role;
+
+
+sub speak { say '汪' }
+</code></pre>
+
+<p><br/></p>
+
+<pre><code>package CanRun;
+use Moo::Role;
+
+
+sub run { say 'running' }
+</code></pre>
+
+<p><br/>  </p>
+
+<pre><code>package Dog;
+use Moo;
+with 'CanSpeak';
+with 'CanRun';
+
+
+my $dog = Dog-&gt;new();
+$dog-&gt;speek();
+$dog-&gt;run();
+</code></pre>
+
+<hr />
+
+<h2>requires</h2>
+
+<pre><code>package CanSpeak;
+use Moo::Role;
+
+requires 'words';
+
+sub speak { say $self-&gt;words-&gt;[int rand 10] }
+</code></pre>
+
+<p><br/></p>
+
+<pre><code>package Dog;
+use Moo;
+with 'CanSpeak';
+
+has 'words' =&gt; (is =&gt; 'ro', default =&gt; sub { ['汪', '汪汪', ....] }); 
+
+my $dog = Dog-&gt;new();
+$dog-&gt;speek();
+</code></pre>
+
+<hr />
+
+<h2>does</h2>
+
+<p>```
+    print "hi" if $dog->does('CanSpeak');</p>
+
+<p>```</p>
+
+<hr />
+
+<h2>Thanks</h2>
+
+
+        </div>
+        <footer>
+            
+            <div class="container tagline">
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://www.perl.org">Powered by Perl</a>
+            </div>
+        </footer>
+    </body>
+</html>
