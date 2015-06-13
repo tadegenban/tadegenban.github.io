@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://tadegenban.github.io/</id>
     <title>My Statocles Site</title>
-    <updated>2015-06-13T17:23:23Z</updated>
+    <updated>2015-06-13T17:27:00Z</updated>
     <link href="http://tadegenban.github.io/blog/index.atom" rel="self" />
     <link href="http://tadegenban.github.io/" rel="alternate" />
     <generator version="0.047">Statocles</generator>

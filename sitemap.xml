@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>http://tadegenban.github.io/slide/2015/3/23/moo-introduction.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
         <loc>http://tadegenban.github.io/static/revealjs/test/examples/slide-backgrounds.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/slide/Moo-introduction/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
         <lastmod>2015-06-13</lastmod>
