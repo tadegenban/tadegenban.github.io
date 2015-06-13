@@ -1,0 +1,56 @@
+---
+blog_app:
+  args:
+    store: blog
+    url_root: /blog
+  class: Statocles::App::Blog
+deploy:
+  args:
+    branch: master
+  class: Statocles::Deploy::Git
+page_app:
+  args:
+    store: .
+    url_root: /
+  class: Statocles::App::Plain
+slide_app:
+  args:
+    store: slide
+    url_root: /slide
+  class: Statocles::App::Static
+site:
+  args:
+    apps:
+      blog:
+        $ref: blog_app
+      page:
+        $ref: page_app
+      slide:
+        $ref: slide_app
+      static:
+        $ref: static_app
+    base_url: http://tadegenban.github.io
+    deploy:
+      $ref: deploy
+    index: blog
+    nav:
+      main:
+        - href: /
+          title: Blog
+    theme:
+      $ref: theme
+    title: My Statocles Site
+  class: Statocles::Site
+  on:
+    - build:
+        $class: Statocles::Plugin::LinkCheck
+        $sub: check_pages
+static_app:
+  args:
+    store: static
+    url_root: /static
+  class: Statocles::App::Static
+theme:
+  args:
+    store: theme
+  class: Statocles::Theme

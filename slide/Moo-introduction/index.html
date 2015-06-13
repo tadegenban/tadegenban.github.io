@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/static/revealjs/lib/css/zenburn.css">
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
-      document.write( '<link rel="stylesheet" href="revealjs/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+      document.write( '<link rel="stylesheet" href="/static/revealjs/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
     </script>
     <!--[if lt IE 9]>
       <script src="revealjs/lib/js/html5shiv.js"></script>
@@ -20,7 +20,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-markdown="Moo-introduction.md"
+        <section data-markdown="/slide/Moo-introduction/Moo-introduction.md"
                  data-separator="^---"
                  data-vertical="^___"
                  data-charset="utf-8"
@@ -29,8 +29,8 @@
       </div>
     </div>
 
-    <script src="revealjs/lib/js/head.min.js"></script>
-    <script src="revealjs/js/reveal.min.js"></script>
+    <script src="/static/revealjs/lib/js/head.min.js"></script>
+    <script src="/static/revealjs/js/reveal.js"></script>
 
     <script>
       Reveal.initialize({
@@ -41,15 +41,15 @@
         history: true,
         center: true,
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
         // Optional libraries used to extend on reveal.js
         dependencies: [
-          { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          { src: '/static/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/static/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/static/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '/static/revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '/static/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '/static/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
     </script>
