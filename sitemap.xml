@@ -1,76 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>/</loc>
+        <loc>http://tadegenban.github.io/static/revealjs/test/examples/slide-backgrounds.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/test/test-markdown-element-attributes.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/test/examples/math.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/test/test-markdown.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/test/test-markdown-slide-attributes.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/test/test.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/plugin/notes/notes.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/test/test-pdf.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/static/revealjs/plugin/markdown/example.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2015-06-13</lastmod>
+    </url>
+    <url>
+        <loc>http://tadegenban.github.io/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2015-01-19</lastmod>
+        <lastmod>2015-06-13</lastmod>
     </url>
     <url>
-        <loc>/blog/tag/perl</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.3</priority>
-        <lastmod>2015-01-19</lastmod>
-    </url>
-    <url>
-        <loc>/blog/tag/Pegex</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.3</priority>
-        <lastmod>2014-12-17</lastmod>
-    </url>
-    <url>
-        <loc>/blog/tag/perl-Moo-oop</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.3</priority>
-        <lastmod>2014-10-11</lastmod>
-    </url>
-    <url>
-        <loc>/blog/tag/emacs</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.3</priority>
-        <lastmod>2014-06-19</lastmod>
-    </url>
-    <url>
-        <loc>/blog/2015/01/19/perl-tricks.html</loc>
+        <loc>http://tadegenban.github.io/blog/2015/06/13/try/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <lastmod>2015-01-19</lastmod>
+        <lastmod>2015-06-13</lastmod>
     </url>
     <url>
-        <loc>/blog/2014/10/11/moo-introduction.html</loc>
+        <loc>http://tadegenban.github.io/static/revealjs/test/examples/slide-transitions.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <lastmod>2014-10-11</lastmod>
+        <lastmod>2015-06-13</lastmod>
     </url>
     <url>
-        <loc>/blog/2014/12/17/pegex.html</loc>
+        <loc>http://tadegenban.github.io/static/revealjs/test/examples/barebones.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <lastmod>2014-12-17</lastmod>
+        <lastmod>2015-06-13</lastmod>
     </url>
     <url>
-        <loc>/blog/2014/06/19/emacs-auto-split-windows.html</loc>
+        <loc>http://tadegenban.github.io/static/revealjs/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <lastmod>2014-06-19</lastmod>
+        <lastmod>2015-06-13</lastmod>
     </url>
     <url>
-        <loc>/blog/2014/09/23/my-our-local-state.html</loc>
+        <loc>http://tadegenban.github.io/static/revealjs/plugin/notes-server/notes.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <lastmod>2014-09-23</lastmod>
+        <lastmod>2015-06-13</lastmod>
     </url>
     <url>
-        <loc>/about.html</loc>
+        <loc>http://tadegenban.github.io/static/revealjs/test/examples/embedded-media.html</loc>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
-        <lastmod>2015-03-23</lastmod>
-    </url>
-    <url>
-        <loc>/slide/2015/3/23/moo-introduction.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-        <lastmod>2015-03-23</lastmod>
+        <lastmod>2015-06-13</lastmod>
     </url>
 </urlset>
 
