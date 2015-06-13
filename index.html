@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="/theme/css/normalize.css" rel="stylesheet">
-        <link href="/theme/css/skeleton.css" rel="stylesheet">
-        <link href="/theme/css/statocles-default.css" rel="stylesheet">
-        <title>My Statocles Site</title>
-        <link href="/blog/index.atom" rel="alternate" type="application/atom+xml">
-        <link href="/blog/index.rss" rel="alternate" type="application/rss+xml">
+        <link rel="stylesheet" href="/theme/css/normalize.css" />
+        <link rel="stylesheet" href="/theme/css/skeleton.css" />
+        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <title>TADEGENBAN</title>
+        <link rel="alternate" href="/blog/index.atom" type="application/atom+xml" />
+        <link rel="alternate" href="/blog/index.rss" type="application/rss+xml" />
         
     </head>
     <body>
         <header>
             <nav class="navbar">
                 <div class="container">
-                    <a class="brand" href="/">My Statocles Site</a>
+                    <a class="brand" href="/">TADEGENBAN</a>
                     <ul>
                         <li>
-                            <a href="/">Blog</a>
+                            <a href="/index.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/about.html">About</a>
                         </li>
                     </ul>
                 </div>
@@ -30,24 +33,693 @@
     <div class="nine columns">
         <main>
 
-
             <article>
                 <header>
-                    <h1><a href="/blog/2015/06/13/try/">try</a></h1>
+                    <h1><a href="/blog/2015/01/19/perl-tricks.html">perl tricks</a></h1>
 
                     <p class="tags">Tags:
+                        <a href="/blog/tag/perl" rel="tag">perl</a>
                     </p>
 
                     <aside>
-                        <p><time datetime="2015-06-13">
-                            Posted on 2015-06-13
+                        <p><time datetime="2015-01-19">
+                            Posted on 2015-01-19
                         </time>
+                            by tadegenban
                         </p>
                     </aside>
 
                 </header>
 
-                <p>Markdown content goes here.</p>
+                <p>这是我在知乎上的答题。</p>
+
+<h2>// 操作符</h2>
+
+<pre><code>$a = $b // $c;
+# $a = $b, 如果$b 为undef, $a = $c
+</code></pre>
+
+<p>常常我会这么写来给变量定义一个默认值</p>
+
+<pre><code>$some_var //= 0;
+</code></pre>
+
+<h2>... yada yada</h2>
+
+<p>当我们定义一个函数而打算在未来实现它</p>
+
+<pre><code>sub unimplemented {
+    ...
+}
+</code></pre>
+
+<p>三个dot 这个操作符表示这里还有待实现，程序运行不会报错，但如果使用到这个未定义的函数，则会抛出'unimplement'的异常
+这个操作符有个名字 yada yada 是来自日语的词汇，释义为等等，之类的意思</p>
+
+<h2>-> 和 autobox</h2>
+
+<p>-> 操作符有个比较有意思的一个地方，除了我们常用的</p>
+
+<pre><code>$hash-&gt;{key}
+$list-&gt;[0]
+$obj-&gt;method()
+</code></pre>
+
+<p>之外，还有一个神奇的功能来实现autobox,也就是所谓的·一切皆对象·</p>
+
+<pre><code>my $len = sub { length(shift) };
+"hello"-&gt;$len();
+</code></pre>
+
+<p>如果想要没有$的autobox， "hello"->len(),可以看看CPAN 上的autobox::Core</p>
+
+<h2>s///r</h2>
+
+<p>是否遇到希望用s///来得到想要的字符串而不希望改变原来的变量？</p>
+
+<pre><code>$x = "I like dogs.";
+$y = $x =~ s/dogs/cats/r;
+print "$x $y\n"; # prints "I like dogs. I like cats."
+</code></pre>
+
+<h2>here doc 和 inline file</h2>
+
+<p>here doc 可以像下面这样定义一个长的字符串</p>
+
+<pre><code>my $str = &lt;&lt;__;
+some string here
+bla blah
+__
+</code></pre>
+
+<p>inline file 可以像下面这样在程序内部定义一个file，就像操作文件句柄一样</p>
+
+<pre><code>while( &lt;DATA&gt; ) {
+    print;
+}
+__DATA__
+a b c d
+1 2 3 4
+</code></pre>
+
+<h2>flip-flop</h2>
+
+<p>.. 除了在列表上下文作为范围操作符使用</p>
+
+<pre><code>'a'..'z' # ('a', 'b', ... 'z')
+
+在标量上下文也有特别的用法，称作flip-flop操作符，行为就像一个状态触发器。
+</code></pre>
+
+<p>while(<$fh>)
+{
+  next if 1..100; # skip 1 ~ 100 line
+  ...
+}</p>
+
+<h2>autovivification</h2>
+
+<p>这个应该是perl所特有的一种用法
+使得我可以不必依次定义一个数据的每一级类型，而直接对其进行任意深度的赋值</p>
+
+<pre><code>my $hash = {};
+$hash-&gt;{a}-&gt;{b}-&gt;{c} = 1;
+</code></pre>
+
+<p>方便之外，也可能会带来麻烦</p>
+
+<pre><code>my $hash = {};
+if ( exists $hash-&gt;{a} ) {
+    print 'exists';     # no
+}
+if ( exists $hash-&gt;{a}-&gt;{b} ) {
+    print 'exists';     # no
+}
+if ( exists $hash-&gt;{a} ) {
+    print 'exists now'  # yes
+    }
+</code></pre>
+
+<p>我们可以使用<code>no autovivification</code> 来关闭这一特性</p>
+
+<h2>quote word list: qw</h2>
+
+<p>这个非常常用，在写一个字符串数组的时候,不用麻烦的大引号了逗号了</p>
+
+<pre><code>qw( item1 item2 item3 )  =&gt; ('item1', 'item2', 'item3')
+</code></pre>
+
+<h2>x</h2>
+
+<pre><code>'a' x 4 # 'aaaa'
+</code></pre>
+
+<p>对数组同样有效</p>
+
+<pre><code>(1,2,3) x 3 # (1,2,3,1,2,3,1,2,3)
+</code></pre>
+
+<h2>label</h2>
+
+<p>可以在任意位置定义标签，通过goto 进行跳转。
+当然很多人都不推荐在程序大量使用goto, 但是perl中定义标签还有一个非常有用的功能，就是循环中使用next 或 last + 标签来进行跨层使用。</p>
+
+<pre><code>LABEL:
+for ( @list_A) {
+    for ( @list_B ) {
+       ...;
+       next LABEL;
+    }
+
+}
+</code></pre>
+
+<h2>@{[...]}</h2>
+
+<p>由于perl的sigil的存在，使得perl在print 的时候很容易内插变量，比如在c 中</p>
+
+<pre><code>printf("my name is %s, i'm %d", name, age)
+</code></pre>
+
+<p>而在perl 中就可以这么写</p>
+
+<pre><code>print "my name is $name, i'm $age";
+</code></pre>
+
+<p>@{[...]} 更是极大的扩展了这一功能，你可以在字符串中内插表达式</p>
+
+<pre><code>my $x = 1;
+my $y = 2;
+print "$x + $y = @{[ $x + $y ]}"
+</code></pre>
+
+<h2>($x, $y) = ($y, $x );</h2>
+
+<p>python 中的 a, b = b, a</p>
+
+
+
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2014/12/17/pegex.html">Pegex 语法解析模块</a></h1>
+
+                    <p class="tags">Tags:
+                        <a href="/blog/tag/Pegex" rel="tag">Pegex</a>
+                    </p>
+
+                    <aside>
+                        <p><time datetime="2014-12-17">
+                            Posted on 2014-12-17
+                        </time>
+                            by tadegenban
+                        </p>
+                    </aside>
+
+                </header>
+
+                <p><a href="https://metacpan.org/pod/distribution/Pegex/lib/Pegex.pod">Pegex</a> 是一个语法解析框架，全称是 Parsing Expression Grammars (PEG), with Regular Expessions (Regex) 。 作者是<a href="https://metacpan.org/author/INGY">Ingy dot net</a>, 相信大家都听过他的另外一个模块 <a href="https://metacpan.org/release/Inline">Inline</a>, <a href="https://metacpan.org/release/Inline-C">Inline::C</a>, 最近Ingy的 <a href="http://inline.ouistreet.com/">Inline Module Supprot</a> 项目也是得到了Perl基金会TPF（The Perl Fundation ）的赞助, 相信以后的Inline会更加好用。</p>
+
+<p>最近的China Perl Advent也有介绍一个语法解析模块<a href="https://github.com/PerlChina/mojo-advent/blob/master/articles/2014/16/regexp_grammars.md">Regexp::Grammar</a>. 我没有用过这个模块，但看起来和Pegex的思路大致是一样的，因为其作者是Damian Conway, 所以也是很有保障的。</p>
+
+<p>还是回到Pegex, 就像它的名字一样, Pegex是一个基于正则表达式来做语法解析的框架, 灵感来自于Perl6的Rules. 相比普通的正则表达式, Pegex的语法更加清晰易懂和结构化.比如我们想定义一个语法表示所有以#开头的都是注释：</p>
+
+<pre><code>comment: / HASH ANY* EOL /
+</code></pre>
+
+<p>这里以冒号分割定义了一个 rule 叫 comment， / / 扩起来的其实就是表示正则表达式， 只是用 HASH 来代替 #, 看起来干净一些， 以上的写法和下面的正则表示是一样的</p>
+
+<pre><code>comment: /#.*\r?\n/
+</code></pre>
+
+<p>这里的HASH ANY EOL也是rule，只是事先定义好的默认rule，所以可以看到，Pegex的语法定义其实就是定义一个个子rule，最后把他们串起来。而rule本质上也是正则表达式。</p>
+
+<p>与perl的正则语法不同的是</p>
+
+<p>在正则语句中，用尖括号括起来的是rule</p>
+
+<pre><code>/ ( &lt;rule1&gt; | 'non_rule' ) /
+</code></pre>
+
+<p>如果你想省略尖括号，可以在rule前留一个空白</p>
+
+<pre><code>/ ( rule1 | 'non_rule' ) /
+</code></pre>
+
+<p>正则语句默认是忽略空白的，你可以把一个表达式拆成多行来写，也就是相当于正则 /x模式 默认开启</p>
+
+<pre><code>/ (
+    rule1+   # 注释
+    |
+    rule2
+) /
+</code></pre>
+
+<p>用- + 来表示 \s* 和 \s+</p>
+
+<pre><code>/ - rule3 + /  # rule3 前面可以有0-多个空白， 后面有1到多个空白
+</code></pre>
+
+<p>在perl中任何(?XX ) 形式的语法，在这里都可以把？省略， 也就是下面两个是一样的</p>
+
+<pre><code>/ (: a | b ) /
+
+/ (?: a | b ) /
+</code></pre>
+
+<p>我们再来看一个解析CSV的例子(来自<a href="https://metacpan.org/pod/distribution/Pegex-CSV/lib/Pegex/CSV.pod">Pegex::CSV</a> 模块)</p>
+
+<pre><code>csv: row*
+
+row:
+  /(= ALL)/
+  value* % /- COMMA/
+  /- (: EOL | CR | EOS)/
+
+value: /- ( double | plain) /
+
+double: /- DOUBLE (: (: DOUBLE DOUBLE | [^ DOUBLE] )* ) DOUBLE /
+
+plain: /- (: [^ COMMA DOUBLE CR NL]* [^ SPACE TAB COMMA DOUBLE CR NL ] )? /
+</code></pre>
+
+<p>第一句定义表示csv 是由零到多个row组成</p>
+
+<p>第二句定义表示row 是有逗号分隔的value组成, 这里 % 是Pegex提供的一个操作符，表示用。。分隔的意思，也是来自Perl6的</p>
+
+<p>第三句定义value 是一个double 或者plain</p>
+
+<p>第四句定义double 是一个由双引号扩起来的字符串</p>
+
+<p>第五句定义plain 是一个非逗号，双引号， 换行，空白 等等的 字符串</p>
+
+<p>我们可以看到Pegex的定义本质上也是用的正则. 用DOUBLE, COMMA, EOL 这样的直白的名字来代替'",\r?\n', 用定义rule来将整个语法拆分成每个部分，在写比较复杂的正则表达式时会非常清晰，相信大家都有看一个非常复杂的正则时的头痛。</p>
+
+<p>语法定义好了，我还需要定义一个接受器(Receiver), Pegex提供一个基类Pegex::Tree,供你在此基础上定义你的接收器。</p>
+
+<p>下面是一个CSV的接收器，将解析过的csv转化为一个二维数组的形式（List of List）。</p>
+
+<pre><code>package Pegex::CSV::LoL;
+use Pegex::Base;
+extends 'Pegex::Tree';
+
+sub got_row {
+    my ($self, $got) = @_;
+    $self-&gt;flatten($got);
+}
+
+sub got_value {
+    $_[1] =~ s/(?:^"|"$)//g;
+    $_[1] =~ s/""/"/g;
+    return $_[1];
+}
+</code></pre>
+
+<p>got_* 方法用来定义当Parser捕获了一个相应的rule后进行的操作, *对应之前在语法定义时的rule名字。</p>
+
+<p>比如这里got_value 就是把得到的value的双引号去掉， flatten是将一个多维数组展平成一个一维数组。</p>
+
+<p>Grammar和Receiver都定义好之后，整个工作就算完成了，可以用定义好的语法和接受器来读csv文件了。</p>
+
+<pre><code>my $parser = Pegex::Parser-&gt;new(
+    grammar =&gt; Pegex::CSV::Grammar-&gt;new,
+    receiver =&gt; Pegex::CSV::LoL-&gt;new,
+);
+
+$parser-&gt;parse($csv);
+</code></pre>
+
+<p>我现在用到Pegex地方主要是解析一些各种各样格式的数据, 以及为配置文件定义自己的语法DSL。相比之前用正则和循环来写， 一个是工作量降低， 基本是语法定义好就可以用了的节奏， Pegex为你做了语法解析的事情， 剩下的只是写Receiver得到想要的数据类型。 另一个是代码干净了许多， 后面维护起来很方便。</p>
+
+
+
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2014/10/11/moo-introduction.html">用Moo来写面向对象perl</a></h1>
+
+                    <p class="tags">Tags:
+                        <a href="/blog/tag/perl-Moo-oop" rel="tag">perl Moo oop</a>
+                    </p>
+
+                    <aside>
+                        <p><time datetime="2014-10-11">
+                            Posted on 2014-10-11
+                        </time>
+                            by tadegenban
+                        </p>
+                    </aside>
+
+                </header>
+
+                <h2>Moose 大家庭</h2>
+
+<p>perl的原生的面向对象是比较简单的，通过bless关键字和hash来建立对象，很灵活但也很简陋</p>
+
+<p>自从出现了Moose之后，perl的面向对象就很富有表现力了。</p>
+
+<p>Moose -> Moos -> Moo -> Mo -> M, 再加上Mouse， 构成了Moose大家庭</p>
+
+<p>从Moose到M依次功能递减， M 代表 nothing， 在不太复杂的项目一般用Moo就足够了</p>
+
+<p>这里简单介绍一下Moo的用法</p>
+
+<h2>Moo -- 轻量级面向对象</h2>
+
+<p>比如我要建立一个Person对象，用Moo可以这么写:</p>
+
+<pre><code>package Person;
+use Moo;
+
+has name =&gt; is =&gt; 'rw';
+has age  =&gt; is =&gt; 'rw';
+
+sub intro {
+    my $self = shift;
+    print "My name is ". $self-&gt;name;
+}
+</code></pre>
+
+<p>在你的代码里就可以这么建立一个Person对象:</p>
+
+<pre><code>use Person;
+
+my $lip = Person-&gt;new(name =&gt; 'lip', age =&gt; 18 );
+$lip-&gt;intro();
+</code></pre>
+
+<p>和perl的原生OOP一样，一个package就是一个对象。</p>
+
+<p>Moo提供了一个<code>has</code>关键字，用来定义属性</p>
+
+<pre><code>has name =&gt; is =&gt; 'rw';
+</code></pre>
+
+<p>表示属性<code>name</code> 是 可读可写 的，如果写成<code>'ro'</code>就表示是只读的</p>
+
+<p><code>sub intro</code> 定义了一个方法， <code>$self</code> 是指代实例本身， <code>$self-&gt;name</code> 就可以得到name属性的值</p>
+
+<p>下面详细介绍一些Moo的特性</p>
+
+<h2>属性定义 -- has</h2>
+
+<pre><code>has attr =&gt; is =&gt; 'rw', default =&gt; 'default';
+</code></pre>
+
+<p>or</p>
+
+<p>has attr => (
+       is => 'rw',
+       default => 'default',
+       )</p>
+
+<p>因为小括号只是起到分组的作用，所以两种写法都是一样的。</p>
+
+<p>has 的 options 有：</p>
+
+<p>is(必要的) : 可以是'rw' 读写, 'ro' 只读, 'lazy' 惰性</p>
+
+<p>isa : 用来定义这个属性的类型， 比如：</p>
+
+<pre><code>isa =&gt; sub { die "$_[0] is not a number!" unless looks_like_number $_[0] }
+</code></pre>
+
+<p>就确保该属性是一个数字。</p>
+
+<p>default:  默认值，需要注意的是这里一般是传个匿名函数作为值，比如你要默认值为一个空数组引用：</p>
+
+<pre><code>default =&gt; sub { [] };
+</code></pre>
+
+<p>builder : 这个一般配合lazy使用，在lazy=1时，属性的值不会在对象建立的时候建立，而是在第一次求值的时候调用builder来计算</p>
+
+<p>lazy :  如上</p>
+
+<p>reader/writer : 你可以定义一个reader给属性， 比如 get_attr， 定义一个writer为 set_attr</p>
+
+<pre><code>            只是相比$self-&gt;attr既是读又是写，来的更浅显
+</code></pre>
+
+<h2>对象继承 -- extends</h2>
+
+<h2>方法修改器 -- before after around</h2>
+
+
+
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2014/09/23/my-our-local-state.html">perl 变量 my our local state</a></h1>
+
+                    <p class="tags">Tags:
+                        <a href="/blog/tag/perl" rel="tag">perl</a>
+                    </p>
+
+                    <aside>
+                        <p><time datetime="2014-09-23">
+                            Posted on 2014-09-23
+                        </time>
+                            by tadegenban
+                        </p>
+                    </aside>
+
+                </header>
+
+                <h2>perl 变量类型与作用域</h2>
+
+<p>根据作用域的不同来区分，perl有两种变量类型：</p>
+
+<ul>
+<li><p>词法变量(Lexical Variable) -- 词法作用域，只在当前词法作用域内可见。</p></li>
+<li><p>包变量(Package Variable)  -- 全局变量，在任何位置可见</p></li>
+</ul>
+
+<p>有三种创建变量的方式：</p>
+
+<ul>
+<li><p>my  -- 创建一个词法变量</p></li>
+<li><p>our -- 创建一个词法变量，但实际上是包变量的别名，或者说是伪装成词法变量的包变量</p></li>
+<li><p>直接使用 -- 不加任何声明的使用一个变量，将创建一个包变量</p></li>
+</ul>
+
+<p>下面我们详细说一下这几种方式</p>
+
+<h2>直接使用  -- 包变量</h2>
+
+<pre><code>$foo = 1;
+</code></pre>
+
+<p>在perl早期的时候，大家都是这么定义，使用变量的。</p>
+
+<p>这么定义变量$foo将会是全局变量，也就是在程序的任何位置都能访问到它。</p>
+
+<p>这样当随着代码规模的增长，会引起一个严重的问题，变量污染，比如：</p>
+
+<pre><code>$foo = 1; # $foo -&gt; 1
+f();
+          # $foo -&gt; 2
+sub f {
+   $foo = 2;
+}
+</code></pre>
+
+<p>如果不小心命名，则很容易在某个意想不到的位置，变量$foo被赋值，出现bug。</p>
+
+<p>所以 perl5 引进了strict 和warnings 两个pragma,在代码上加上use strict后，所有没有</p>
+
+<p>直接声明而使用的变量都会报错。</p>
+
+<p>所以现在这种用法已经废弃了，在一些教程书中会这么开始教学，但这种用法在实际代码中是绝对不建议再使用的。</p>
+
+<p>取而代之的是 my</p>
+
+<h2>my -- 词法变量</h2>
+
+<pre><code>my $foo = 1;
+</code></pre>
+
+<p>my 的出现，极大的解决了变量污染的问题，因为my所声明的变量是 -- 局部变量，词法作用域。</p>
+
+<p>局部变量的概念，比较好理解，比如：</p>
+
+<pre><code>my $foo = 1; # $foo -&gt; 1
+f();
+             # $foo -&gt; 1
+sub f {
+   my $foo = 2 # $foo -&gt; 2
+}
+</code></pre>
+
+<p>在函数f中的$foo 之在局部范围内起作用，出了函数之后，就不再起作用，所以也就不会影响到外部的$foo</p>
+
+<p>需要理解的是这里的词法作用域，词法作用域限制了局部变量的名字生存的范围，这里一个词法作用域，基本上就是一个BLOCK，也就是一个花括号阔住的范围。</p>
+
+<p>所以，只要有一个BLOCK就会建立一个词法作用域，比如：</p>
+
+<pre><code>my $foo = 1; # $foo -&gt; 1
+f();
+             # $foo -&gt; 1
+sub f {
+    my $foo = 2 # $foo -&gt; 2
+    if ( 1 ) {
+        my $foo = 3 # $foo -&gt; 3
+    }
+}
+</code></pre>
+
+<p>这里在函数f内部的if语句中，建立一个新的词法作用域，同样对这里的$foo赋值不会影响到外部的$foo</p>
+
+<p>my基本上已经够用了，然而由于之前提到的strict 和warnings ,导致不能使用全局变量。</p>
+
+<p>因此出现了our</p>
+
+<h2>our -- 伪装成词法变量的包变量</h2>
+
+<pre><code>our $foo = 1;
+</code></pre>
+
+<p>our 的出现解决了不能使用全局变量的问题，our所声明的变量是全局变量的词法作用域的别名。</p>
+
+<p>意思就是，这里$foo是$main::foo的别名，如果是在模块MyModule中声明的话，就是$MyModule::foo.</p>
+
+<p>但是它同时又是词法作用域的，所以在词法作用域范围外无法访问到它，只能通过模块变量名$MyModule::foo来访问</p>
+
+<p>可以说 our 所声明的变量是伪装成词法变量的全局变量。</p>
+
+<p>举个例子：</p>
+
+<pre><code>package A;
+
+{
+    our $foo = 1;
+    print $foo;     # 1
+}
+print $foo;         # error
+print $A::foo;      # 1
+
+package B;
+print $A::foo;      # 1
+</code></pre>
+
+<p>这里在花括号之外将无法访问到$foo, 但能通过模块变量名来访问 $A::foo</p>
+
+<p>在模块B中，也能通过$A::foo来访问模块A所定义的变量。</p>
+
+<h2>local -- 包变量的临时赋值</h2>
+
+<pre><code>local $foo = 1;
+</code></pre>
+
+<p>local 并不创建一个新的变量，而是对已有的包变量临时赋予一个值，在退出当前scope后将原来的值还回去。</p>
+
+<pre><code>$foo = 1;                 # $foo -&gt; 1
+{
+    local $foo = 2;       # $foo -&gt; 2  将原先的$foo藏起来，赋予一个临时的值
+}
+$foo                      # $foo -&gt; 1  将藏起来的值还回去
+</code></pre>
+
+<p>看起来有点像my,local确实是在my出现以前的解决方案，在my出来之后，使用的情形也就不多了。</p>
+
+<p>比较有意思的是，local是动态作用域，什么意思呢？ 我们比较一下下面两个代码：</p>
+
+<pre><code>my $foo = 1;
+{
+    my $foo = 2;
+    f();
+}
+sub f {
+    print "foo is $foo";
+}
+</code></pre>
+
+<p>结果是</p>
+
+<pre><code>foo is 1
+</code></pre>
+
+<p>因为词法作用域的$foo对函数f也是不可见的,函数f看到的是在最外层的$foo,而local就不同了</p>
+
+<pre><code>$foo = 1;
+{
+    local $foo = 2;
+    f();
+}
+sub f {
+    print "foo is $foo";
+}
+</code></pre>
+
+<p>结果是</p>
+
+<pre><code>foo is 2
+</code></pre>
+
+<p>这就是动态作用域，对一般的代码来说，local的适用范围并不广，因为本身全局变量就是不提倡使用的，而local只对全局变量起作用，</p>
+
+<p>可能有些时候你需要对内建的全局变量比如 $/, $_ 临时赋值，这时候会用到local。</p>
+
+<h2>state -- 词法变量,静态变量</h2>
+
+<pre><code>state $foo = 1;
+</code></pre>
+
+<p>state比较好理解，它就像c中的静态变量一样，只在第一次调用时候创建该变量，之后都是操作的同一个变量</p>
+
+<p>state也是词法变量，所以只在定义该变量的词法作用域中有效，举个例子：</p>
+
+<pre><code>sub count {
+    state $counter = 0;
+    $counter++;
+    return $counter;
+}
+say count();
+say count();
+say count();
+</code></pre>
+
+<h2>总结</h2>
+
+<p>因为perl的向下兼容性做的非常好，所以perl也抗了很多历史包袱，比如这里提到的不声明直接使用的全局变量。</p>
+
+<p>现在提倡的用法是变量都用my声明，在需要全局包变量的情况下，用our声明，所有代码前都要加上use strict 和use warnings</p>
+
+<p>这两个pragma, 在某些特定的时候会需要local 和 static 。</p>
+
+
+
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs 自动分割窗口</a></h1>
+
+                    <p class="tags">Tags:
+                        <a href="/blog/tag/emacs" rel="tag">emacs</a>
+                    </p>
+
+                    <aside>
+                        <p><time datetime="2014-06-19">
+                            Posted on 2014-06-19
+                        </time>
+                            by tadegenban
+                        </p>
+                    </aside>
+
+                </header>
+
+                <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
+
+<p>每次启动Emacs都要C-x-3 C-x-2来建立窗口，后面就自己尝试写了一点Elisp</p>
+
+<p>来每次启动的时候自动分割窗口，如下,</p>
+
+<pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
+                           (select-window-2)
+                           (split-window-vertically) )
+      )
+</code></pre>
+
+<p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
 
 
 
@@ -56,13 +728,17 @@
 
         <ul class="pager">
             <li class="prev">
-                <a class="button disabled" href="" rel="next">
-                    ← Older
+                <a class="button disabled"
+                    rel="next" href=""
+                >
+                    &larr; Older
                 </a>
             </li>
             <li class="next">
-                <a class="button disabled" href="" rel="prev">
-                    Newer →
+                <a class="button disabled"
+                    rel="prev" href=""
+                >
+                    Newer &rarr;
                 </a>
             </li>
         </ul>
@@ -73,6 +749,10 @@
         
         <h1>Tags</h1>
         <ul class="list-inline">
+            <li><a href="/blog/tag/Pegex">Pegex</a></li>
+            <li><a href="/blog/tag/emacs">emacs</a></li>
+            <li><a href="/blog/tag/perl">perl</a></li>
+            <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
         </ul>
         <h1>Feeds</h1>
         <ul class="list-inline">
@@ -95,7 +775,7 @@
         <footer>
             
             <div class="container tagline">
-                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br>
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
                 <a href="http://www.perl.org">Powered by Perl</a>
             </div>
         </footer>
