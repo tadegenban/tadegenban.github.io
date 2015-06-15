@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/theme/css/normalize.css" />
-        <link rel="stylesheet" href="/theme/css/skeleton.css" />
-        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <link href="/theme/css/normalize.css" rel="stylesheet">
+        <link href="/theme/css/skeleton.css" rel="stylesheet">
+        <link href="/theme/css/statocles-default.css" rel="stylesheet">
         <title>TADEGENBAN</title>
-        <link rel="alternate" href="/blog/tag/emacs.atom" type="application/atom+xml" />
-        <link rel="alternate" href="/blog/tag/emacs.rss" type="application/rss+xml" />
+        <link href="/blog/tag/emacs.atom" rel="alternate" type="application/atom+xml">
+        <link href="/blog/tag/emacs.rss" rel="alternate" type="application/rss+xml">
         
     </head>
     <body>
@@ -16,10 +16,13 @@
                     <a class="brand" href="/">TADEGENBAN</a>
                     <ul>
                         <li>
-                            <a href="/index.html">Blog</a>
+                            <a href="/">Blog</a>
                         </li>
                         <li>
                             <a href="/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="/index_slides.html">Slides</a>
                         </li>
                     </ul>
                 </div>
@@ -33,12 +36,13 @@
     <div class="nine columns">
         <main>
 
+
             <article>
                 <header>
                     <h1><a href="/blog/2014/06/19/emacs-auto-split-windows.html">Emacs 自动分割窗口</a></h1>
 
                     <p class="tags">Tags:
-                        <a href="/blog/tag/emacs" rel="tag">emacs</a>
+                        <a href="/blog/tag/emacs/" rel="tag">emacs</a>
                     </p>
 
                     <aside>
@@ -57,7 +61,7 @@
 
 <p>来每次启动的时候自动分割窗口，如下,</p>
 
-<pre><code>(add-hook 'window-setup-hook (lambda () (split-window-horizontally)
+<pre><code>(add-hook &#39;window-setup-hook (lambda () (split-window-horizontally)
                            (select-window-2)
                            (split-window-vertically) )
       )
@@ -72,17 +76,13 @@
 
         <ul class="pager">
             <li class="prev">
-                <a class="button disabled"
-                    rel="next" href=""
-                >
-                    &larr; Older
+                <a class="button disabled" href="" rel="next">
+                    ← Older
                 </a>
             </li>
             <li class="next">
-                <a class="button disabled"
-                    rel="prev" href=""
-                >
-                    Newer &rarr;
+                <a class="button disabled" href="" rel="prev">
+                    Newer →
                 </a>
             </li>
         </ul>
@@ -93,10 +93,10 @@
         
         <h1>Tags</h1>
         <ul class="list-inline">
-            <li><a href="/blog/tag/Pegex">Pegex</a></li>
-            <li><a href="/blog/tag/emacs">emacs</a></li>
-            <li><a href="/blog/tag/perl">perl</a></li>
-            <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
+            <li><a href="/blog/tag/Pegex/">Pegex</a></li>
+            <li><a href="/blog/tag/emacs/">emacs</a></li>
+            <li><a href="/blog/tag/perl/">perl</a></li>
+            <li><a href="/blog/tag/perl-Moo-oop/">perl Moo oop</a></li>
         </ul>
         <h1>Feeds</h1>
         <ul class="list-inline">
@@ -119,7 +119,7 @@
         <footer>
             
             <div class="container tagline">
-                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br>
                 <a href="http://www.perl.org">Powered by Perl</a>
             </div>
         </footer>

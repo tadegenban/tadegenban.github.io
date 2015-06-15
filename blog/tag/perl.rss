@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>TADEGENBAN</title>
-        <link>/blog/tag/perl</link>
-        <atom:link href="/blog/tag/perl.rss" rel="self" type="application/rss+xml" />
+        <link>http://tadegenban.github.io/blog/tag/perl/</link>
+        <atom:link href="http://tadegenban.github.io/blog/tag/perl.rss" rel="self" type="application/rss+xml" />
         <description>Blog feed of TADEGENBAN</description>
-        <generator>Statocles 0.042</generator>
+        <generator>Statocles 0.047</generator>
         <item>
             <title>perl tricks</title>
-            <link>/blog/2015/01/19/perl-tricks.html</link>
-            <guid>/blog/2015/01/19/perl-tricks.html</guid>
+            <link>http://tadegenban.github.io/blog/2015/01/19/perl-tricks.html</link>
+            <guid>http://tadegenban.github.io/blog/2015/01/19/perl-tricks.html</guid>
             <description><![CDATA[
                 <p>这是我在知乎上的答题。</p>
 
@@ -177,9 +177,9 @@ print "$x + $y = @{[ $x + $y ]}"
 
 <p>python 中的 a, b = b, a</p>
 
-                    <p><a href="/blog/2015/01/19/perl-tricks.html#section-2">Continue reading...</a></p>
+                    <p><a href="http://tadegenban.github.io/blog/2015/01/19/perl-tricks.html#section-2">Continue reading...</a></p>
                 <p>Tags:
-                    <a href="/blog/tag/perl">perl</a>
+                    <a href="/blog/tag/perl/">perl</a>
                 </p>
             ]]></description>
             <pubDate>
@@ -188,8 +188,8 @@ print "$x + $y = @{[ $x + $y ]}"
         </item>
         <item>
             <title>perl 变量 my our local state</title>
-            <link>/blog/2014/09/23/my-our-local-state.html</link>
-            <guid>/blog/2014/09/23/my-our-local-state.html</guid>
+            <link>http://tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</link>
+            <guid>http://tadegenban.github.io/blog/2014/09/23/my-our-local-state.html</guid>
             <description><![CDATA[
                 <h2>perl 变量类型与作用域</h2>
 
@@ -392,9 +392,9 @@ say count();
 
 <p>这两个pragma, 在某些特定的时候会需要local 和 static 。</p>
 
-                    <p><a href="/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
+                    <p><a href="http://tadegenban.github.io/blog/2014/09/23/my-our-local-state.html#section-2">Continue reading...</a></p>
                 <p>Tags:
-                    <a href="/blog/tag/perl">perl</a>
+                    <a href="/blog/tag/perl/">perl</a>
                 </p>
             ]]></description>
             <pubDate>

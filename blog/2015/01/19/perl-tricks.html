@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/theme/css/normalize.css" />
-        <link rel="stylesheet" href="/theme/css/skeleton.css" />
-        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <link href="/theme/css/normalize.css" rel="stylesheet">
+        <link href="/theme/css/skeleton.css" rel="stylesheet">
+        <link href="/theme/css/statocles-default.css" rel="stylesheet">
         <title>TADEGENBAN</title>
         
     </head>
@@ -14,10 +14,13 @@
                     <a class="brand" href="/">TADEGENBAN</a>
                     <ul>
                         <li>
-                            <a href="/index.html">Blog</a>
+                            <a href="/">Blog</a>
                         </li>
                         <li>
                             <a href="/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="/index_slides.html">Slides</a>
                         </li>
                     </ul>
                 </div>
@@ -32,7 +35,7 @@
             <header>
                 <h1>perl tricks</h1>
                 <p class="tags">Tags:
-                    <a href="/blog/tag/perl" rel="tag">perl</a>
+                    <a href="/blog/tag/perl/" rel="tag">perl</a>
                 </p>
                 <aside>
                     <p><time datetime="2015-01-19">
@@ -65,12 +68,12 @@
 }
 </code></pre>
 
-<p>三个dot 这个操作符表示这里还有待实现，程序运行不会报错，但如果使用到这个未定义的函数，则会抛出'unimplement'的异常
+<p>三个dot 这个操作符表示这里还有待实现，程序运行不会报错，但如果使用到这个未定义的函数，则会抛出&#39;unimplement&#39;的异常
 这个操作符有个名字 yada yada 是来自日语的词汇，释义为等等，之类的意思</p>
 
-<h2>-> 和 autobox</h2>
+<h2>-&gt; 和 autobox</h2>
 
-<p>-> 操作符有个比较有意思的一个地方，除了我们常用的</p>
+<p>-&gt; 操作符有个比较有意思的一个地方，除了我们常用的</p>
 
 <pre><code>$hash-&gt;{key}
 $list-&gt;[0]
@@ -80,18 +83,18 @@ $obj-&gt;method()
 <p>之外，还有一个神奇的功能来实现autobox,也就是所谓的·一切皆对象·</p>
 
 <pre><code>my $len = sub { length(shift) };
-"hello"-&gt;$len();
+&quot;hello&quot;-&gt;$len();
 </code></pre>
 
-<p>如果想要没有$的autobox， "hello"->len(),可以看看CPAN 上的autobox::Core</p>
+<p>如果想要没有$的autobox， &quot;hello&quot;-&gt;len(),可以看看CPAN 上的autobox::Core</p>
 
 <h2>s///r</h2>
 
 <p>是否遇到希望用s///来得到想要的字符串而不希望改变原来的变量？</p>
 
-<pre><code>$x = "I like dogs.";
+<pre><code>$x = &quot;I like dogs.&quot;;
 $y = $x =~ s/dogs/cats/r;
-print "$x $y\n"; # prints "I like dogs. I like cats."
+print &quot;$x $y\n&quot;; # prints &quot;I like dogs. I like cats.&quot;
 </code></pre>
 
 <h2>here doc 和 inline file</h2>
@@ -118,7 +121,7 @@ a b c d
 
 <p>.. 除了在列表上下文作为范围操作符使用</p>
 
-<pre><code>'a'..'z' # ('a', 'b', ... 'z')
+<pre><code>&#39;a&#39;..&#39;z&#39; # (&#39;a&#39;, &#39;b&#39;, ... &#39;z&#39;)
 
 在标量上下文也有特别的用法，称作flip-flop操作符，行为就像一个状态触发器。
 </code></pre>
@@ -127,7 +130,7 @@ a b c d
 {
   next if 1..100; # skip 1 ~ 100 line
   ...
-}</p>
+}</$fh></p>
 
 <h2>autovivification</h2>
 
@@ -142,13 +145,13 @@ $hash-&gt;{a}-&gt;{b}-&gt;{c} = 1;
 
 <pre><code>my $hash = {};
 if ( exists $hash-&gt;{a} ) {
-    print 'exists';     # no
+    print &#39;exists&#39;;     # no
 }
 if ( exists $hash-&gt;{a}-&gt;{b} ) {
-    print 'exists';     # no
+    print &#39;exists&#39;;     # no
 }
 if ( exists $hash-&gt;{a} ) {
-    print 'exists now'  # yes
+    print &#39;exists now&#39;  # yes
     }
 </code></pre>
 
@@ -158,12 +161,12 @@ if ( exists $hash-&gt;{a} ) {
 
 <p>这个非常常用，在写一个字符串数组的时候,不用麻烦的大引号了逗号了</p>
 
-<pre><code>qw( item1 item2 item3 )  =&gt; ('item1', 'item2', 'item3')
+<pre><code>qw( item1 item2 item3 )  =&gt; (&#39;item1&#39;, &#39;item2&#39;, &#39;item3&#39;)
 </code></pre>
 
 <h2>x</h2>
 
-<pre><code>'a' x 4 # 'aaaa'
+<pre><code>&#39;a&#39; x 4 # &#39;aaaa&#39;
 </code></pre>
 
 <p>对数组同样有效</p>
@@ -190,19 +193,19 @@ for ( @list_A) {
 
 <p>由于perl的sigil的存在，使得perl在print 的时候很容易内插变量，比如在c 中</p>
 
-<pre><code>printf("my name is %s, i'm %d", name, age)
+<pre><code>printf(&quot;my name is %s, i&#39;m %d&quot;, name, age)
 </code></pre>
 
 <p>而在perl 中就可以这么写</p>
 
-<pre><code>print "my name is $name, i'm $age";
+<pre><code>print &quot;my name is $name, i&#39;m $age&quot;;
 </code></pre>
 
 <p>@{[...]} 更是极大的扩展了这一功能，你可以在字符串中内插表达式</p>
 
 <pre><code>my $x = 1;
 my $y = 2;
-print "$x + $y = @{[ $x + $y ]}"
+print &quot;$x + $y = @{[ $x + $y ]}&quot;
 </code></pre>
 
 <h2>($x, $y) = ($y, $x );</h2>
@@ -218,10 +221,10 @@ print "$x + $y = @{[ $x + $y ]}"
         <nav id="tags">
             <h1>Tags</h1>
             <ul class="list-inline">
-                <li><a href="/blog/tag/Pegex">Pegex</a></li>
-                <li><a href="/blog/tag/emacs">emacs</a></li>
-                <li><a href="/blog/tag/perl">perl</a></li>
-                <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
+                <li><a href="/blog/tag/Pegex/">Pegex</a></li>
+                <li><a href="/blog/tag/emacs/">emacs</a></li>
+                <li><a href="/blog/tag/perl/">perl</a></li>
+                <li><a href="/blog/tag/perl-Moo-oop/">perl Moo oop</a></li>
             </ul>
         </nav>
     </div>
@@ -232,7 +235,7 @@ print "$x + $y = @{[ $x + $y ]}"
         <footer>
             
             <div class="container tagline">
-                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br>
                 <a href="http://www.perl.org">Powered by Perl</a>
             </div>
         </footer>

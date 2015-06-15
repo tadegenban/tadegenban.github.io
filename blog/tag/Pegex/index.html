@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/theme/css/normalize.css" />
-        <link rel="stylesheet" href="/theme/css/skeleton.css" />
-        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <link href="/theme/css/normalize.css" rel="stylesheet">
+        <link href="/theme/css/skeleton.css" rel="stylesheet">
+        <link href="/theme/css/statocles-default.css" rel="stylesheet">
         <title>TADEGENBAN</title>
-        <link rel="alternate" href="/blog/tag/Pegex.atom" type="application/atom+xml" />
-        <link rel="alternate" href="/blog/tag/Pegex.rss" type="application/rss+xml" />
+        <link href="/blog/tag/Pegex.atom" rel="alternate" type="application/atom+xml">
+        <link href="/blog/tag/Pegex.rss" rel="alternate" type="application/rss+xml">
         
     </head>
     <body>
@@ -16,10 +16,13 @@
                     <a class="brand" href="/">TADEGENBAN</a>
                     <ul>
                         <li>
-                            <a href="/index.html">Blog</a>
+                            <a href="/">Blog</a>
                         </li>
                         <li>
                             <a href="/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="/index_slides.html">Slides</a>
                         </li>
                     </ul>
                 </div>
@@ -33,12 +36,13 @@
     <div class="nine columns">
         <main>
 
+
             <article>
                 <header>
                     <h1><a href="/blog/2014/12/17/pegex.html">Pegex 语法解析模块</a></h1>
 
                     <p class="tags">Tags:
-                        <a href="/blog/tag/Pegex" rel="tag">Pegex</a>
+                        <a href="/blog/tag/Pegex/" rel="tag">Pegex</a>
                     </p>
 
                     <aside>
@@ -71,12 +75,12 @@
 
 <p>在正则语句中，用尖括号括起来的是rule</p>
 
-<pre><code>/ ( &lt;rule1&gt; | 'non_rule' ) /
+<pre><code>/ ( &lt;rule1&gt; | &#39;non_rule&#39; ) /
 </code></pre>
 
 <p>如果你想省略尖括号，可以在rule前留一个空白</p>
 
-<pre><code>/ ( rule1 | 'non_rule' ) /
+<pre><code>/ ( rule1 | &#39;non_rule&#39; ) /
 </code></pre>
 
 <p>正则语句默认是忽略空白的，你可以把一个表达式拆成多行来写，也就是相当于正则 /x模式 默认开启</p>
@@ -126,7 +130,7 @@ plain: /- (: [^ COMMA DOUBLE CR NL]* [^ SPACE TAB COMMA DOUBLE CR NL ] )? /
 
 <p>第五句定义plain 是一个非逗号，双引号， 换行，空白 等等的 字符串</p>
 
-<p>我们可以看到Pegex的定义本质上也是用的正则. 用DOUBLE, COMMA, EOL 这样的直白的名字来代替'",\r?\n', 用定义rule来将整个语法拆分成每个部分，在写比较复杂的正则表达式时会非常清晰，相信大家都有看一个非常复杂的正则时的头痛。</p>
+<p>我们可以看到Pegex的定义本质上也是用的正则. 用DOUBLE, COMMA, EOL 这样的直白的名字来代替&#39;&quot;,\r?\n&#39;, 用定义rule来将整个语法拆分成每个部分，在写比较复杂的正则表达式时会非常清晰，相信大家都有看一个非常复杂的正则时的头痛。</p>
 
 <p>语法定义好了，我还需要定义一个接受器(Receiver), Pegex提供一个基类Pegex::Tree,供你在此基础上定义你的接收器。</p>
 
@@ -134,7 +138,7 @@ plain: /- (: [^ COMMA DOUBLE CR NL]* [^ SPACE TAB COMMA DOUBLE CR NL ] )? /
 
 <pre><code>package Pegex::CSV::LoL;
 use Pegex::Base;
-extends 'Pegex::Tree';
+extends &#39;Pegex::Tree&#39;;
 
 sub got_row {
     my ($self, $got) = @_;
@@ -142,8 +146,8 @@ sub got_row {
 }
 
 sub got_value {
-    $_[1] =~ s/(?:^"|"$)//g;
-    $_[1] =~ s/""/"/g;
+    $_[1] =~ s/(?:^&quot;|&quot;$)//g;
+    $_[1] =~ s/&quot;&quot;/&quot;/g;
     return $_[1];
 }
 </code></pre>
@@ -171,17 +175,13 @@ $parser-&gt;parse($csv);
 
         <ul class="pager">
             <li class="prev">
-                <a class="button disabled"
-                    rel="next" href=""
-                >
-                    &larr; Older
+                <a class="button disabled" href="" rel="next">
+                    ← Older
                 </a>
             </li>
             <li class="next">
-                <a class="button disabled"
-                    rel="prev" href=""
-                >
-                    Newer &rarr;
+                <a class="button disabled" href="" rel="prev">
+                    Newer →
                 </a>
             </li>
         </ul>
@@ -192,10 +192,10 @@ $parser-&gt;parse($csv);
         
         <h1>Tags</h1>
         <ul class="list-inline">
-            <li><a href="/blog/tag/Pegex">Pegex</a></li>
-            <li><a href="/blog/tag/emacs">emacs</a></li>
-            <li><a href="/blog/tag/perl">perl</a></li>
-            <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
+            <li><a href="/blog/tag/Pegex/">Pegex</a></li>
+            <li><a href="/blog/tag/emacs/">emacs</a></li>
+            <li><a href="/blog/tag/perl/">perl</a></li>
+            <li><a href="/blog/tag/perl-Moo-oop/">perl Moo oop</a></li>
         </ul>
         <h1>Feeds</h1>
         <ul class="list-inline">
@@ -218,7 +218,7 @@ $parser-&gt;parse($csv);
         <footer>
             
             <div class="container tagline">
-                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br>
                 <a href="http://www.perl.org">Powered by Perl</a>
             </div>
         </footer>

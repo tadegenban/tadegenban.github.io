@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>TADEGENBAN</title>
-        <link>/blog/tag/perl-Moo-oop</link>
-        <atom:link href="/blog/tag/perl-Moo-oop.rss" rel="self" type="application/rss+xml" />
+        <link>http://tadegenban.github.io/blog/tag/perl-Moo-oop/</link>
+        <atom:link href="http://tadegenban.github.io/blog/tag/perl-Moo-oop.rss" rel="self" type="application/rss+xml" />
         <description>Blog feed of TADEGENBAN</description>
-        <generator>Statocles 0.042</generator>
+        <generator>Statocles 0.047</generator>
         <item>
             <title>用Moo来写面向对象perl</title>
-            <link>/blog/2014/10/11/moo-introduction.html</link>
-            <guid>/blog/2014/10/11/moo-introduction.html</guid>
+            <link>http://tadegenban.github.io/blog/2014/10/11/moo-introduction.html</link>
+            <guid>http://tadegenban.github.io/blog/2014/10/11/moo-introduction.html</guid>
             <description><![CDATA[
                 <h2>Moose 大家庭</h2>
 
@@ -103,9 +103,9 @@ $lip-&gt;intro();
 
 <h2>方法修改器 -- before after around</h2>
 
-                    <p><a href="/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
+                    <p><a href="http://tadegenban.github.io/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
                 <p>Tags:
-                    <a href="/blog/tag/perl-Moo-oop">perl Moo oop</a>
+                    <a href="/blog/tag/perl-Moo-oop/">perl Moo oop</a>
                 </p>
             ]]></description>
             <pubDate>

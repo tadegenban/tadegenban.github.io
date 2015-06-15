@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/theme/css/normalize.css" />
-        <link rel="stylesheet" href="/theme/css/skeleton.css" />
-        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <link href="/theme/css/normalize.css" rel="stylesheet">
+        <link href="/theme/css/skeleton.css" rel="stylesheet">
+        <link href="/theme/css/statocles-default.css" rel="stylesheet">
         <title>TADEGENBAN</title>
         
     </head>
@@ -14,10 +14,13 @@
                     <a class="brand" href="/">TADEGENBAN</a>
                     <ul>
                         <li>
-                            <a href="/index.html">Blog</a>
+                            <a href="/">Blog</a>
                         </li>
                         <li>
                             <a href="/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="/index_slides.html">Slides</a>
                         </li>
                     </ul>
                 </div>
@@ -32,7 +35,7 @@
             <header>
                 <h1>perl 变量 my our local state</h1>
                 <p class="tags">Tags:
-                    <a href="/blog/tag/perl" rel="tag">perl</a>
+                    <a href="/blog/tag/perl/" rel="tag">perl</a>
                 </p>
                 <aside>
                     <p><time datetime="2014-09-23">
@@ -187,7 +190,7 @@ $foo                      # $foo -&gt; 1  将藏起来的值还回去
     f();
 }
 sub f {
-    print "foo is $foo";
+    print &quot;foo is $foo&quot;;
 }
 </code></pre>
 
@@ -204,7 +207,7 @@ sub f {
     f();
 }
 sub f {
-    print "foo is $foo";
+    print &quot;foo is $foo&quot;;
 }
 </code></pre>
 
@@ -253,10 +256,10 @@ say count();
         <nav id="tags">
             <h1>Tags</h1>
             <ul class="list-inline">
-                <li><a href="/blog/tag/Pegex">Pegex</a></li>
-                <li><a href="/blog/tag/emacs">emacs</a></li>
-                <li><a href="/blog/tag/perl">perl</a></li>
-                <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
+                <li><a href="/blog/tag/Pegex/">Pegex</a></li>
+                <li><a href="/blog/tag/emacs/">emacs</a></li>
+                <li><a href="/blog/tag/perl/">perl</a></li>
+                <li><a href="/blog/tag/perl-Moo-oop/">perl Moo oop</a></li>
             </ul>
         </nav>
     </div>
@@ -267,7 +270,7 @@ say count();
         <footer>
             
             <div class="container tagline">
-                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br>
                 <a href="http://www.perl.org">Powered by Perl</a>
             </div>
         </footer>

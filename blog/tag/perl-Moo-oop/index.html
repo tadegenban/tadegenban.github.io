@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/theme/css/normalize.css" />
-        <link rel="stylesheet" href="/theme/css/skeleton.css" />
-        <link rel="stylesheet" href="/theme/css/statocles-default.css" />
+        <link href="/theme/css/normalize.css" rel="stylesheet">
+        <link href="/theme/css/skeleton.css" rel="stylesheet">
+        <link href="/theme/css/statocles-default.css" rel="stylesheet">
         <title>TADEGENBAN</title>
-        <link rel="alternate" href="/blog/tag/perl-Moo-oop.atom" type="application/atom+xml" />
-        <link rel="alternate" href="/blog/tag/perl-Moo-oop.rss" type="application/rss+xml" />
+        <link href="/blog/tag/perl-Moo-oop.atom" rel="alternate" type="application/atom+xml">
+        <link href="/blog/tag/perl-Moo-oop.rss" rel="alternate" type="application/rss+xml">
         
     </head>
     <body>
@@ -16,10 +16,13 @@
                     <a class="brand" href="/">TADEGENBAN</a>
                     <ul>
                         <li>
-                            <a href="/index.html">Blog</a>
+                            <a href="/">Blog</a>
                         </li>
                         <li>
                             <a href="/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="/index_slides.html">Slides</a>
                         </li>
                     </ul>
                 </div>
@@ -33,12 +36,13 @@
     <div class="nine columns">
         <main>
 
+
             <article>
                 <header>
                     <h1><a href="/blog/2014/10/11/moo-introduction.html">用Moo来写面向对象perl</a></h1>
 
                     <p class="tags">Tags:
-                        <a href="/blog/tag/perl-Moo-oop" rel="tag">perl Moo oop</a>
+                        <a href="/blog/tag/perl-Moo-oop/" rel="tag">perl Moo oop</a>
                     </p>
 
                     <aside>
@@ -57,7 +61,7 @@
 
 <p>自从出现了Moose之后，perl的面向对象就很富有表现力了。</p>
 
-<p>Moose -> Moos -> Moo -> Mo -> M, 再加上Mouse， 构成了Moose大家庭</p>
+<p>Moose -&gt; Moos -&gt; Moo -&gt; Mo -&gt; M, 再加上Mouse， 构成了Moose大家庭</p>
 
 <p>从Moose到M依次功能递减， M 代表 nothing， 在不太复杂的项目一般用Moo就足够了</p>
 
@@ -70,12 +74,12 @@
 <pre><code>package Person;
 use Moo;
 
-has name =&gt; is =&gt; 'rw';
-has age  =&gt; is =&gt; 'rw';
+has name =&gt; is =&gt; &#39;rw&#39;;
+has age  =&gt; is =&gt; &#39;rw&#39;;
 
 sub intro {
     my $self = shift;
-    print "My name is ". $self-&gt;name;
+    print &quot;My name is &quot;. $self-&gt;name;
 }
 </code></pre>
 
@@ -83,7 +87,7 @@ sub intro {
 
 <pre><code>use Person;
 
-my $lip = Person-&gt;new(name =&gt; 'lip', age =&gt; 18 );
+my $lip = Person-&gt;new(name =&gt; &#39;lip&#39;, age =&gt; 18 );
 $lip-&gt;intro();
 </code></pre>
 
@@ -91,10 +95,10 @@ $lip-&gt;intro();
 
 <p>Moo提供了一个<code>has</code>关键字，用来定义属性</p>
 
-<pre><code>has name =&gt; is =&gt; 'rw';
+<pre><code>has name =&gt; is =&gt; &#39;rw&#39;;
 </code></pre>
 
-<p>表示属性<code>name</code> 是 可读可写 的，如果写成<code>'ro'</code>就表示是只读的</p>
+<p>表示属性<code>name</code> 是 可读可写 的，如果写成<code>&#39;ro&#39;</code>就表示是只读的</p>
 
 <p><code>sub intro</code> 定义了一个方法， <code>$self</code> 是指代实例本身， <code>$self-&gt;name</code> 就可以得到name属性的值</p>
 
@@ -102,25 +106,25 @@ $lip-&gt;intro();
 
 <h2>属性定义 -- has</h2>
 
-<pre><code>has attr =&gt; is =&gt; 'rw', default =&gt; 'default';
+<pre><code>has attr =&gt; is =&gt; &#39;rw&#39;, default =&gt; &#39;default&#39;;
 </code></pre>
 
 <p>or</p>
 
-<p>has attr => (
-       is => 'rw',
-       default => 'default',
+<p>has attr =&gt; (
+       is =&gt; &#39;rw&#39;,
+       default =&gt; &#39;default&#39;,
        )</p>
 
 <p>因为小括号只是起到分组的作用，所以两种写法都是一样的。</p>
 
 <p>has 的 options 有：</p>
 
-<p>is(必要的) : 可以是'rw' 读写, 'ro' 只读, 'lazy' 惰性</p>
+<p>is(必要的) : 可以是&#39;rw&#39; 读写, &#39;ro&#39; 只读, &#39;lazy&#39; 惰性</p>
 
 <p>isa : 用来定义这个属性的类型， 比如：</p>
 
-<pre><code>isa =&gt; sub { die "$_[0] is not a number!" unless looks_like_number $_[0] }
+<pre><code>isa =&gt; sub { die &quot;$_[0] is not a number!&quot; unless looks_like_number $_[0] }
 </code></pre>
 
 <p>就确保该属性是一个数字。</p>
@@ -150,17 +154,13 @@ $lip-&gt;intro();
 
         <ul class="pager">
             <li class="prev">
-                <a class="button disabled"
-                    rel="next" href=""
-                >
-                    &larr; Older
+                <a class="button disabled" href="" rel="next">
+                    ← Older
                 </a>
             </li>
             <li class="next">
-                <a class="button disabled"
-                    rel="prev" href=""
-                >
-                    Newer &rarr;
+                <a class="button disabled" href="" rel="prev">
+                    Newer →
                 </a>
             </li>
         </ul>
@@ -171,10 +171,10 @@ $lip-&gt;intro();
         
         <h1>Tags</h1>
         <ul class="list-inline">
-            <li><a href="/blog/tag/Pegex">Pegex</a></li>
-            <li><a href="/blog/tag/emacs">emacs</a></li>
-            <li><a href="/blog/tag/perl">perl</a></li>
-            <li><a href="/blog/tag/perl-Moo-oop">perl Moo oop</a></li>
+            <li><a href="/blog/tag/Pegex/">Pegex</a></li>
+            <li><a href="/blog/tag/emacs/">emacs</a></li>
+            <li><a href="/blog/tag/perl/">perl</a></li>
+            <li><a href="/blog/tag/perl-Moo-oop/">perl Moo oop</a></li>
         </ul>
         <h1>Feeds</h1>
         <ul class="list-inline">
@@ -197,7 +197,7 @@ $lip-&gt;intro();
         <footer>
             
             <div class="container tagline">
-                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br/>
+                <a href="http://preaction.github.io/Statocles">Made with Statocles</a><br>
                 <a href="http://www.perl.org">Powered by Perl</a>
             </div>
         </footer>

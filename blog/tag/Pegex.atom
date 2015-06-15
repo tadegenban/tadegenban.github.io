@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>/blog/tag/Pegex</id>
+    <id>http://tadegenban.github.io/blog/tag/Pegex/</id>
     <title>TADEGENBAN</title>
-    <updated>2015-03-23T22:30:13Z</updated>
-    <link rel="self" href="/blog/tag/Pegex.atom"/>
-    <link rel="alternate" href="/blog/tag/Pegex"/>
-    <generator version="0.042">Statocles</generator>
+    <updated>2015-06-16T00:18:52Z</updated>
+    <link href="http://tadegenban.github.io/blog/tag/Pegex.atom" rel="self" />
+    <link href="http://tadegenban.github.io/blog/tag/Pegex/" rel="alternate" />
+    <generator version="0.047">Statocles</generator>
     <entry>
-        <id>/blog/2014/12/17/pegex.html</id>
+        <id>http://tadegenban.github.io/blog/2014/12/17/pegex.html</id>
         <title>Pegex 语法解析模块</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="/blog/2014/12/17/pegex.html" />
+        <link href="http://tadegenban.github.io/blog/2014/12/17/pegex.html" rel="alternate" />
         <content type="html"><![CDATA[
             <p><a href="https://metacpan.org/pod/distribution/Pegex/lib/Pegex.pod">Pegex</a> 是一个语法解析框架，全称是 Parsing Expression Grammars (PEG), with Regular Expessions (Regex) 。 作者是<a href="https://metacpan.org/author/INGY">Ingy dot net</a>, 相信大家都听过他的另外一个模块 <a href="https://metacpan.org/release/Inline">Inline</a>, <a href="https://metacpan.org/release/Inline-C">Inline::C</a>, 最近Ingy的 <a href="http://inline.ouistreet.com/">Inline Module Supprot</a> 项目也是得到了Perl基金会TPF（The Perl Fundation ）的赞助, 相信以后的Inline会更加好用。</p>
 
@@ -125,9 +125,9 @@ $parser-&gt;parse($csv);
 
 <p>我现在用到Pegex地方主要是解析一些各种各样格式的数据, 以及为配置文件定义自己的语法DSL。相比之前用正则和循环来写， 一个是工作量降低， 基本是语法定义好就可以用了的节奏， Pegex为你做了语法解析的事情， 剩下的只是写Receiver得到想要的数据类型。 另一个是代码干净了许多， 后面维护起来很方便。</p>
 
-                <p><a href="/blog/2014/12/17/pegex.html#section-2">Continue reading...</a></p>
+                <p><a href="http://tadegenban.github.io/blog/2014/12/17/pegex.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/Pegex">Pegex</a>
+                <a href="/blog/tag/Pegex/">Pegex</a>
             </p>
         ]]></content>
         <updated>2014-12-17T00:00:00Z</updated>

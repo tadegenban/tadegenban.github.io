@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>/blog/tag/emacs</id>
+    <id>http://tadegenban.github.io/blog/tag/emacs/</id>
     <title>TADEGENBAN</title>
-    <updated>2015-03-23T22:30:13Z</updated>
-    <link rel="self" href="/blog/tag/emacs.atom"/>
-    <link rel="alternate" href="/blog/tag/emacs"/>
-    <generator version="0.042">Statocles</generator>
+    <updated>2015-06-16T00:18:51Z</updated>
+    <link href="http://tadegenban.github.io/blog/tag/emacs.atom" rel="self" />
+    <link href="http://tadegenban.github.io/blog/tag/emacs/" rel="alternate" />
+    <generator version="0.047">Statocles</generator>
     <entry>
-        <id>/blog/2014/06/19/emacs-auto-split-windows.html</id>
+        <id>http://tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html</id>
         <title>Emacs 自动分割窗口</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="/blog/2014/06/19/emacs-auto-split-windows.html" />
+        <link href="http://tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html" rel="alternate" />
         <content type="html"><![CDATA[
             <p>使用Emacs的时候我总是习惯分三个窗口，Code一个，org一个，dir一个</p>
 
@@ -26,9 +26,9 @@
 
 <p>把这段代码放到.emacs文件里或者.emacs.d里的配置文件就可以了</p>
 
-                <p><a href="/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
+                <p><a href="http://tadegenban.github.io/blog/2014/06/19/emacs-auto-split-windows.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/emacs">emacs</a>
+                <a href="/blog/tag/emacs/">emacs</a>
             </p>
         ]]></content>
         <updated>2014-06-19T00:00:00Z</updated>

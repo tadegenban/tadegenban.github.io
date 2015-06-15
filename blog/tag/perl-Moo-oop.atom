@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>/blog/tag/perl-Moo-oop</id>
+    <id>http://tadegenban.github.io/blog/tag/perl-Moo-oop/</id>
     <title>TADEGENBAN</title>
-    <updated>2015-03-23T22:30:13Z</updated>
-    <link rel="self" href="/blog/tag/perl-Moo-oop.atom"/>
-    <link rel="alternate" href="/blog/tag/perl-Moo-oop"/>
-    <generator version="0.042">Statocles</generator>
+    <updated>2015-06-16T00:18:50Z</updated>
+    <link href="http://tadegenban.github.io/blog/tag/perl-Moo-oop.atom" rel="self" />
+    <link href="http://tadegenban.github.io/blog/tag/perl-Moo-oop/" rel="alternate" />
+    <generator version="0.047">Statocles</generator>
     <entry>
-        <id>/blog/2014/10/11/moo-introduction.html</id>
+        <id>http://tadegenban.github.io/blog/2014/10/11/moo-introduction.html</id>
         <title>用Moo来写面向对象perl</title>
         <author><name>tadegenban</name></author>
-        <link rel="alternate" href="/blog/2014/10/11/moo-introduction.html" />
+        <link href="http://tadegenban.github.io/blog/2014/10/11/moo-introduction.html" rel="alternate" />
         <content type="html"><![CDATA[
             <h2>Moose 大家庭</h2>
 
@@ -104,9 +104,9 @@ $lip-&gt;intro();
 
 <h2>方法修改器 -- before after around</h2>
 
-                <p><a href="/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
+                <p><a href="http://tadegenban.github.io/blog/2014/10/11/moo-introduction.html#section-2">Continue reading...</a></p>
             <p>Tags:
-                <a href="/blog/tag/perl-Moo-oop">perl Moo oop</a>
+                <a href="/blog/tag/perl-Moo-oop/">perl Moo oop</a>
             </p>
         ]]></content>
         <updated>2014-10-11T00:00:00Z</updated>
